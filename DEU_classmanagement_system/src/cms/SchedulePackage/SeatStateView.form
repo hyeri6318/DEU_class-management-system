@@ -31,540 +31,1100 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jToggleButton38" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Component id="jToggleButton35" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                      <Component id="jToggleButton36" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="jToggleButton37" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                      <Component id="jToggleButton41" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jToggleButton39" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="jToggleButton40" min="-2" pref="51" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jToggleButton30" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Component id="jToggleButton27" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                      <Component id="jToggleButton28" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="jToggleButton29" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                      <Component id="jToggleButton33" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jToggleButton31" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="jToggleButton32" min="-2" pref="51" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jToggleButton22" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Component id="jToggleButton19" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                      <Component id="jToggleButton20" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="jToggleButton21" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                      <Component id="jToggleButton25" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jToggleButton23" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="jToggleButton24" min="-2" pref="51" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jToggleButton14" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Component id="jToggleButton11" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                      <Component id="jToggleButton12" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="jToggleButton13" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                      <Component id="jToggleButton17" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jToggleButton15" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="jToggleButton16" min="-2" pref="51" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="b1" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Component id="jToggleButton1" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                      <Component id="jToggleButton2" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="jToggleButton3" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                      <Component id="jToggleButton8" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jToggleButton5" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="jToggleButton7" min="-2" pref="51" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jToggleButton34" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
-                  <Component id="jToggleButton26" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
-                  <Component id="jToggleButton18" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
-                  <Component id="jToggleButton9" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
-                  <Component id="jToggleButton10" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
-              </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="class_combobox" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="date_textfield" min="-2" pref="192" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="506" max="-2" attributes="0"/>
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="name" min="-2" pref="88" max="-2" attributes="0"/>
+                              <Component id="start_combobox" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="end_combobox" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="approve_num" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="s915_button" min="-2" pref="137" max="-2" attributes="0"/>
+                                  <Component id="s911_button" alignment="0" min="-2" pref="137" max="-2" attributes="0"/>
+                                  <Component id="s916_button" min="-2" pref="137" max="-2" attributes="0"/>
+                                  <Component id="s918_button" min="-2" pref="137" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="admin_num" min="-2" pref="76" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="btn1" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                                  <Component id="r1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="btn2" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                                  <Component id="r2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="btn3" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                                  <Component id="r3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="btn4" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                                  <Component id="r4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="btn5" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                                  <Component id="r5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="r6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="btn6" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="btn9" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                                  <Component id="r9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="btn10" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                                  <Component id="r10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="btn11" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                                  <Component id="r11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="btn12" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                                  <Component id="r12" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="btn13" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                                  <Component id="r13" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="r14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="btn14" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="btn7" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                                  <Component id="r7" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="r8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="btn8" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="btn15" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                                  <Component id="r15" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="r16" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="btn16" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
                                   </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="end_time" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="start_time" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="p_num" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn17" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="r17" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn18" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="r18" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn19" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="r19" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn20" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="r20" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn21" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="r21" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn22" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="r22" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn23" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="r23" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="r24" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btn24" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn33" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="r33" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn34" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="r34" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn35" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="r35" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn36" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="r36" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn37" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="r37" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn38" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="r38" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn39" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="r39" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="r40" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btn40" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="r25" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btn25" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn26" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="r26" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn27" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="r27" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn28" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="r28" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn29" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="r29" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn30" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="r30" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn31" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="r31" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="r32" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btn32" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="83" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="447" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="349" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="54" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <Component id="jComboBox1" min="-2" pref="33" max="-2" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="29" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="end_combobox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="start_combobox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="class_combobox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="date_textfield" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="r1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="r2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="r3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="r4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="r5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="r6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="r7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="r8" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jToggleButton1" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton2" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton3" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="b1" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton5" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton7" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton9" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton8" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                          <Component id="btn1" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn2" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn3" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn4" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn5" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn6" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn7" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn8" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jToggleButton11" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton12" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton13" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton14" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton15" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton16" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton10" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton17" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                          <Component id="r9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r10" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r11" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r12" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r13" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r14" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r15" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r16" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="btn9" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn10" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn11" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn12" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn13" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn14" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn15" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn16" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jToggleButton19" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton20" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton21" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton22" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton23" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton24" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton18" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton25" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                          <Component id="r17" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r18" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r19" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r20" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r21" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r22" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r23" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r24" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="btn17" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn18" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn19" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn20" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn21" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn22" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn23" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn24" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jToggleButton27" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton28" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton29" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton30" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton31" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton32" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton26" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton33" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                          <Component id="r25" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r26" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r27" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r28" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r29" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r30" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r31" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r32" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="btn25" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn26" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn27" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn28" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn29" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn30" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn31" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn32" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jToggleButton35" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton36" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton37" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton38" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton39" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton40" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton34" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jToggleButton41" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                          <Component id="r33" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r34" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r35" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r36" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r37" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r38" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r39" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r40" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="btn33" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn34" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn35" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn36" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn37" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn38" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn39" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btn40" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="name" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="224" pref="224" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="approve_num" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="p_num" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="start_time" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="end_time" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="admin_num" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace pref="59" max="32767" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                      <Component id="s915_button" min="-2" pref="38" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="s916_button" min="-2" pref="38" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="s918_button" min="-2" pref="38" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                      <Component id="s911_button" min="-2" pref="38" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="2"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButton1ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="3"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="4"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="b1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="1"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b1ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton5">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="6"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton7">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="7"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton8">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="5"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton9">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="8"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton10">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="16"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton11">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="10"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton12">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="11"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton13">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="12"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton14">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="9"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton15">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="14"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton16">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="15"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton17">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="13"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton18">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="24"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton19">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="18"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton20">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="19"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton21">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="20"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton22">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="17"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton23">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="22"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton24">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="23"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton25">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="21"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton26">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="32"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton27">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="26"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton28">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="27"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton29">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="28"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton30">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="25"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton31">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="30"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton32">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="31"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton33">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="29"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton34">
+    <Component class="javax.swing.JRadioButton" name="r40">
       <Properties>
         <Property name="text" type="java.lang.String" value="40"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton35">
+    <Component class="javax.swing.JRadioButton" name="r26">
       <Properties>
-        <Property name="text" type="java.lang.String" value="34"/>
+        <Property name="text" type="java.lang.String" value="26"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton36">
+    <Component class="javax.swing.JButton" name="btn11">
       <Properties>
-        <Property name="text" type="java.lang.String" value="35"/>
+        <Property name="text" type="java.lang.String" value="11"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r27">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="27"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton37">
+    <Component class="javax.swing.JRadioButton" name="r8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="8"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r28">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="28"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn30">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="30"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn40">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="40"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn36">
       <Properties>
         <Property name="text" type="java.lang.String" value="36"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
     </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton38">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="33"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton39">
+    <Component class="javax.swing.JButton" name="btn38">
       <Properties>
         <Property name="text" type="java.lang.String" value="38"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton40">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="39"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton41">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="37"/>
-      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="&#xb9d1;&#xc740; &#xace0;&#xb515;" size="24" style="1"/>
+          <Font name="&#xb9d1;&#xc740; &#xace0;&#xb515;" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#xd638; &#xc2e4;&#xc2b5;&#xc2e4; &#xc0c1;&#xd0dc; &#xc870;&#xd68c;"/>
+        <Property name="text" type="java.lang.String" value="&#xc88c;&#xc11d; &#xc870;&#xd68c;"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JButton" name="s911_button">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&#xc608;&#xc57d;&#xc790;&#xba85;"/>
+        <Property name="text" type="java.lang.String" value="911 &#xc88c;&#xc11d;&#xc870;&#xd68c;"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="s911_buttonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="s915_button">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="915 &#xc88c;&#xc11d;&#xc870;&#xd68c;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="s915_buttonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="s916_button">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="916 &#xc88c;&#xc11d;&#xc870;&#xd68c;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="s916_buttonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="s918_button">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="918 &#xc88c;&#xc11d;&#xc870;&#xd68c;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="s918_buttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&#xd68c;&#xc6d0;&#xbc88;&#xd638;"/>
+        <Property name="text" type="java.lang.String" value="&#xb0a0;&#xc9dc;"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JComboBox" name="start_combobox">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&#xc2dc;&#xc791;&#xc2dc;&#xac04;"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel5">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#xc885;&#xb8cc;&#xc2dc;&#xac04;"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel6">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#xad00;&#xb9ac;&#xad8c;&#xd55c;&#xc5ec;&#xbd80;"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel7">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#xc778;&#xc99d;&#xc5ec;&#xbd80;"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="name">
-    </Component>
-    <Component class="javax.swing.JTextField" name="p_num">
-    </Component>
-    <Component class="javax.swing.JTextField" name="start_time">
-    </Component>
-    <Component class="javax.swing.JTextField" name="end_time">
-    </Component>
-    <Component class="javax.swing.JTextField" name="admin_num">
-    </Component>
-    <Component class="javax.swing.JTextField" name="approve_num">
-    </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#xc774;&#xc804;"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="&#xb9d1;&#xc740; &#xace0;&#xb515;" size="18" style="1"/>
-        </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="5">
-            <StringItem index="0" value="911"/>
-            <StringItem index="1" value="915"/>
-            <StringItem index="2" value="916"/>
-            <StringItem index="3" value="918"/>
-            <StringItem index="4" value=" "/>
+          <StringArray count="24">
+            <StringItem index="0" value="09:00:00"/>
+            <StringItem index="1" value="10:00:00"/>
+            <StringItem index="2" value="11:00:00"/>
+            <StringItem index="3" value="12:00:00"/>
+            <StringItem index="4" value="13:00:00"/>
+            <StringItem index="5" value="14:00:00"/>
+            <StringItem index="6" value="15:00:00"/>
+            <StringItem index="7" value="16:00:00"/>
+            <StringItem index="8" value="17:00:00"/>
+            <StringItem index="9" value="18:00:00"/>
+            <StringItem index="10" value="19:00:00"/>
+            <StringItem index="11" value="20:00:00"/>
+            <StringItem index="12" value="21:00:00"/>
+            <StringItem index="13" value="22:00:00"/>
+            <StringItem index="14" value="23:00:00"/>
+            <StringItem index="15" value="24:00:00"/>
+            <StringItem index="16" value="01:00:00"/>
+            <StringItem index="17" value="02:00:00"/>
+            <StringItem index="18" value="03:00:00"/>
+            <StringItem index="19" value="04:00:00"/>
+            <StringItem index="20" value="05:00:00"/>
+            <StringItem index="21" value="06:00:00"/>
+            <StringItem index="22" value="07:00:00"/>
+            <StringItem index="23" value="08:00:00"/>
           </StringArray>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="start_comboboxActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
       </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="end_combobox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="24">
+            <StringItem index="0" value="09:00:00"/>
+            <StringItem index="1" value="10:00:00"/>
+            <StringItem index="2" value="11:00:00"/>
+            <StringItem index="3" value="12:00:00"/>
+            <StringItem index="4" value="13:00:00"/>
+            <StringItem index="5" value="14:00:00"/>
+            <StringItem index="6" value="15:00:00"/>
+            <StringItem index="7" value="16:00:00"/>
+            <StringItem index="8" value="17:00:00"/>
+            <StringItem index="9" value="18:00:00"/>
+            <StringItem index="10" value="19:00:00"/>
+            <StringItem index="11" value="20:00:00"/>
+            <StringItem index="12" value="21:00:00"/>
+            <StringItem index="13" value="22:00:00"/>
+            <StringItem index="14" value="23:00:00"/>
+            <StringItem index="15" value="24:00:00"/>
+            <StringItem index="16" value="01:00:00"/>
+            <StringItem index="17" value="02:00:00"/>
+            <StringItem index="18" value="03:00:00"/>
+            <StringItem index="19" value="04:00:00"/>
+            <StringItem index="20" value="05:00:00"/>
+            <StringItem index="21" value="06:00:00"/>
+            <StringItem index="22" value="07:00:00"/>
+            <StringItem index="23" value="08:00:00"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xc2dc;&#xc791;&#xc2dc;&#xac04;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xb05d;&#xc2dc;&#xac04;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="class_combobox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="915"/>
+            <StringItem index="1" value="916"/>
+            <StringItem index="2" value="918"/>
+            <StringItem index="3" value="911"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xc608;&#xc57d;&#xd560; &#xc2e4;&#xc2b5;&#xc2e4;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="date_textfield">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="date_textfieldActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn33">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="33"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r11">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="11"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r12">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="12"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r13">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="13"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r14">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="14"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r15">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="15"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r16">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="16"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r17">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="17"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn24">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="24"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r18">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="18"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r33">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="33"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn17">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="17"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn29">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="29"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r34">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="34"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="9"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r35">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="35"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r36">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="36"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r37">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="37"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r38">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="38"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn15">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="15"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="1"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn25">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="25"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn25ActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn18">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="18"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn19">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="19"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="4"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="6"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn12">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="12"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn20">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="20"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn35">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="35"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn31">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="31"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn13">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="13"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn13ActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="3"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn34">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="34"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn32">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="32"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn32ActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn14">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="14"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="9"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="7"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn10">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="10"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r19">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="19"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="4"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn16">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="16"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn39">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="39"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r20">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="20"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn21">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="21"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="5"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="2"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn37">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="37"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="8"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r10">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="10"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn22">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="22"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn27">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="27"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn27ActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn23">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="23"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r29">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="29"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r30">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="30"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r31">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="31"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="6"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r39">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="39"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn26">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="26"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r21">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="21"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r22">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="22"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r23">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="23"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="5"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn5ActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r24">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="24"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn28">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="28"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="7"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r32">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="32"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="r25">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="25"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
