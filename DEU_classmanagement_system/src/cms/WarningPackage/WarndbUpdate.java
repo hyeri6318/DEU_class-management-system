@@ -1,14 +1,9 @@
 package cms.WarningPackage;
 
-import cms.ClassSearchPackage.SeatSearchPage;
 import cms.ConnectDB.ConnectDB;
-import cms.ResStudentPackage.ResSubject;
-import cms.UserPackage.LoginPage;
+import cms.SchedulePackage.SeatStateView;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,15 +13,18 @@ import javax.swing.JOptionPane;
  */
 public class WarndbUpdate implements WarnObserver {
 
-    String name;
-    String id;
-    int class_num;
-    int seat_num;
-    String starttime;
-    String endtime;
-    int admin;
-    int approve;
-    String warnNum;
+    //사용자 db 정보 모두 입력
+    String name;  //이름
+    String id;   //아이디
+    int admin;  //관리자여부?
+    int approve;  //인증여부?
+    String warnNum;  //경고횟수
+    String pw;   // 비밀번호
+    String userType;   //사용자유형
+    String telNum;   // 전화번호
+    String email;    // 메일
+    
+    
     private WarnSubject warning;
 
     public WarndbUpdate(WarnSubject warning) {
@@ -35,54 +33,45 @@ public class WarndbUpdate implements WarnObserver {
     }
     
     
-    
     @Override
-    public void update(String name, String id, int class_num, int seat_num, String starttime, String endtime, int admin, int approve, String warnNum) {
+    public void update(String name, String id, int admin, int approve, String warnNum, String pw,String userType,String telNum, String email) {
         this.name = name;
         this.id = id;
-        this.class_num = class_num;
-        this.seat_num = seat_num;
-        this.starttime = starttime;
-        this.endtime = endtime;
         this.admin = admin;
         this.approve = approve;
         this.warnNum = warnNum;
+        this.pw = pw;
+        this.userType = userType;
+        this.telNum = telNum;
+        this.email = email;
 
         display();
     }
 
     // 좌석 경고 버튼 구현
     private void display() {
+        
         ConnectDB db = new ConnectDB();
         Connection conn = null;
         PreparedStatement ps = null;
         
-        SeatSearchPage seat = new SeatSearchPage();
-        boolean r_check = seat.r_check();
+        SeatStateView seat = new SeatStateView();  // 좌석 경고 화면 이동
 
-        
         try {
             conn = db.getConnection();
-            String sql1 = "select * from Reservation";    // 예약 db 값 전부 불러오기
-            ps = conn.prepareStatement(sql1);
+            String sql = "update Client set warning = warning+1 where id = ?";    // 예약 db 값 전부 불러오기
+            ps = conn.prepareStatement(sql);
 
-            if(r_check){
-            ps.setString(1, warnNum);  // 경고 횟수 String
-            ps.setString(2, id);    // 아이디 String
+            
+            ps.setString(1,id);    // 아이디 String
 
-            String sql2 = "update Client set WARNING(?) where id = '"+id+"'";   // 사용자 경고 횟수 업데이트
-            ps = conn.prepareStatement(sql2);
-            
-            
-            
             ps.executeUpdate();  // 경고 횟수 업데이트 (select문이 아님)
-            JOptionPane.showMessageDialog(null, "예약 되었습니다.");
-            } else {
-                JOptionPane.showMessageDialog(null, "이미 예약 되었습니다.");
-            }
+            JOptionPane.showMessageDialog(null, "경고 완료");
+            
             conn.close();
 
         } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "경고 실패");
             ex.printStackTrace();
         }
 
