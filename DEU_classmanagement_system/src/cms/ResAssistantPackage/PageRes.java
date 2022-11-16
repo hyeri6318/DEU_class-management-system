@@ -5,8 +5,15 @@
  */
 package cms.ResAssistantPackage;
 
+import cms.ConnectDB.ConnectDB;
+import java.util.ArrayList;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -22,7 +29,53 @@ public class PageRes extends javax.swing.JFrame {
     }
 
     User user = new User();
+    ConnectDB db = new ConnectDB();
+    Connection conn = null;
+    PreparedStatement query = null;
+    Statement st = null;
     String id = "";
+    int classNum = 0;
+
+    //관리자 권한 부여
+//    public void selectAdminister() {
+//
+//        try {
+//            conn = db.getConnection();
+//            st = conn.createStatement();
+//
+//            ResultSet rs1 = null;
+//            ResultSet rs2 = null;
+//            ResultSet rs3 = null;
+//
+//            ArrayList studentId = new ArrayList<String>();
+//            rs1 = st.executeQuery("UPDATE RESERVATION SET ADMIN = 0 WHERE CLASS_NUM = '" + classNum + "'");
+//            rs2 = st.executeQuery("SELECT ID FROM RESERVATION WHERE CLASS_NUM = '" + classNum + "' ORDER BY R_ENDTIME DESC");
+//
+//            while (rs2.next()) {
+//                studentId.add(rs2.getString("l_endtime"));
+//            }
+//
+//            String adminStudent = studentId.get(0).toString();
+//
+//            rs3 = st.executeQuery("UPDATE RESERVATION SET ADMIN = 1 WHERE ID ='" + adminStudent + "'");
+//        } catch (Exception ex) {
+//            ex.printStackTrace();
+//        }
+//    }
+
+    //테이블에서 학생 선택
+    public void selectTable() {
+        TableModel model1 = jTable1.getModel(); // 테이블 저장
+        int[] indexs = jTable1.getSelectedRows(); // 테이블에 있는 열 저장
+
+        DefaultTableModel model2 = (DefaultTableModel) jTable1.getModel();
+
+//        for (int i = 0; i < indexs.length; i++) {
+//            if (score_check == 0) {
+//                row[1] = model1.getValueAt(indexs[i], 1);
+//            }
+//        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -124,11 +177,14 @@ public class PageRes extends javax.swing.JFrame {
 
     private void acceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptActionPerformed
         //승인버튼, 사용자 예약 요청 0 -> 1 로 변경
-        for (int i = 0; i < jTable1.getRowCount(); i++) {
-                id = jTable1.getValueAt(i, 1).toString();
-        }
-        System.out.println(id);
+//        for (int i = 0; i < jTable1.getRowCount(); i++) {
+//            id = jTable1.getValueAt(i, 1).toString();
+//            classNum = (int) jTable1.getValueAt(i, 1);
+//        }
+//        System.out.println(classNum);
         user.rnResUser(id);
+        //selectAdminister();
+
         JOptionPane.showMessageDialog(null, "예약을 승인했습니다.");
         dispose();
     }//GEN-LAST:event_acceptActionPerformed
@@ -136,27 +192,29 @@ public class PageRes extends javax.swing.JFrame {
     private void rejectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rejectActionPerformed
         //거절버튼, 사용자 예약 요청 delete
         for (int i = 0; i < jTable1.getRowCount(); i++) {
-                id = jTable1.getValueAt(i, 1).toString();
+            id = jTable1.getValueAt(i, 1).toString();
         }
         user.rnUnresUser(id);
+
         JOptionPane.showMessageDialog(null, "예약을 거절했습니다.");
         dispose();
     }//GEN-LAST:event_rejectActionPerformed
 
     private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
-        //talbe에 예약 승인 요청상태(check == 0)인 사용자 출력
+        //talbe에 예약 승인 요청상태(approve == 0)인 사용자 출력
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         user.iqResUser(model);
-        for (int i = 0; i < jTable1.getRowCount(); i++) {
-            for (int k = 0; k < jTable1.getColumnCount(); k++) {
-                id = jTable1.getValueAt(i, k).toString();
-            }
-        }
+//        for (int i = 0; i < jTable1.getRowCount(); i++) {
+//            for (int k = 0; k < jTable1.getColumnCount(); k++) {
+//                id = jTable1.getValueAt(i, k).toString();
+//            }
+//        }
+        selectTable();
     }//GEN-LAST:event_searchActionPerformed
 
     /**
-         * @param args the command line arguments
-         */
+     * @param args the command line arguments
+     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -193,7 +251,7 @@ public class PageRes extends javax.swing.JFrame {
     private javax.swing.JButton accept;
     private javax.swing.JButton exit;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    protected static javax.swing.JTable jTable1;
     private javax.swing.JButton reject;
     private javax.swing.JButton search;
     // End of variables declaration//GEN-END:variables

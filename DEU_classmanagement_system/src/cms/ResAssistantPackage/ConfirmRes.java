@@ -13,6 +13,7 @@ import cms.ConnectDB.ConnectDB;
 import java.sql.Connection;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -25,7 +26,7 @@ public class ConfirmRes implements Confirm {
     PreparedStatement query = null;
     Statement st = null;
     ResultSet rs = null;
-    
+
     @Override
     //db에서 예약 승인 대기 상태인 사용자 정보 불러오기
     public void inquiry(DefaultTableModel model) {
@@ -33,7 +34,7 @@ public class ConfirmRes implements Confirm {
         try {
             conn = db.getConnection();
             st = conn.createStatement();
-            
+
             ArrayList name = new ArrayList<String>();
             ArrayList id = new ArrayList<String>();
             ArrayList classNum = new ArrayList<String>();
@@ -42,7 +43,8 @@ public class ConfirmRes implements Confirm {
             ArrayList rEndTime = new ArrayList<String>();
             ArrayList admin = new ArrayList<String>();
             ArrayList approve = new ArrayList<String>();
-            
+            ArrayList day = new ArrayList<String>();
+
             rs = st.executeQuery("SELECT * FROM RESERVATION WHERE APPROVE = 0");
 
             while (rs.next()) {
@@ -54,6 +56,7 @@ public class ConfirmRes implements Confirm {
                 rEndTime.add(rs.getString("R_ENDTIME"));
                 admin.add(rs.getString("ADMIN"));
                 approve.add(rs.getString("APPROVE"));
+                day.add(rs.getString("day"));
             }
 
             Object[] tableline = name.toArray();
@@ -70,9 +73,11 @@ public class ConfirmRes implements Confirm {
                 arr.add(rEndTime.get(i));
                 arr.add(admin.get(i));
                 arr.add(approve.get(i));
+                arr.add(day.get(i));
 
-                model.addRow(new Object[]{arr.get(0), arr.get(1), arr.get(2), arr.get(3), arr.get(4), arr.get(5), arr.get(6), arr.get(7)});
+                model.addRow(new Object[]{arr.get(0), arr.get(1), arr.get(2), arr.get(3), arr.get(4), arr.get(5), arr.get(6), arr.get(7), arr.get(8)});
             }
+
             conn.close();
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -86,13 +91,23 @@ public class ConfirmRes implements Confirm {
         try {
             conn = db.getConnection();
             st = conn.createStatement();
+            
+            TableModel model1 = PageRes.jTable1.getModel();
+            int[] indexs = PageRes.jTable1.getSelectedRows();
+            Object[] row = new Object[9];
 
-            System.out.println(id);
-            //rs = st.executeQuery("SELECT * FROM RESERVATION WHERE ID = " + id + ";");
+            for (int i = 0; i < indexs.length; i++) {
+                row[1] = model1.getValueAt(indexs[i], 1);
+                row[2] = model1.getValueAt(indexs[i], 2);
 
-            query = conn.prepareStatement("UPDATE RESERVATION SET APPROVE = 1 WHERE id = '" + id + "'");
+                System.out.println(row[1]);
+            }
+
+            query = conn.prepareStatement("update reservation set approve=1 where id='" + row[1] + "'");
+            
             query.executeUpdate();
-            conn.close();
+
+            //   conn.close();
         } catch (Exception ex) {
             ex.printStackTrace();
         }
