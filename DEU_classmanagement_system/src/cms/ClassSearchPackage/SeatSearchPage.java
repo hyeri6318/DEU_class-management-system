@@ -133,7 +133,7 @@ public class SeatSearchPage extends javax.swing.JFrame {
                 endtime_list.add(rs.getString("r_endtime"));
             }
 
-            int[] r_time = new int[24];
+            int[] r_time = new int[25];
             int tmp = 0;
             int count = 0;
 
