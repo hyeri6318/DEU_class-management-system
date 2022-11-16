@@ -395,18 +395,20 @@
                   </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="r25" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="r26" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="r27" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="r28" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="r29" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="r30" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="r31" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="r32" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                       <Component id="warn_button" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="warn_textfield" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="r25" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="r26" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="r27" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="r28" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="r29" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="r30" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="r31" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="r32" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>

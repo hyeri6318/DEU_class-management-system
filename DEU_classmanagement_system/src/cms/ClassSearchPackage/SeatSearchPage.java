@@ -59,7 +59,7 @@ public class SeatSearchPage extends javax.swing.JFrame {
         try {
             conn = db.getConnection();
             st = conn.createStatement();
-            rs = st.executeQuery("select * from Reservation");
+            rs = st.executeQuery("select * from Reservation where approve=1");
 
             ArrayList<String> id_list = new ArrayList<String>();
 
@@ -78,8 +78,8 @@ public class SeatSearchPage extends javax.swing.JFrame {
         }
         return true;
     }
-    
-       public boolean w_check(){   // 경고 횟수에 따른 예약 가능여부 확인
+
+    public boolean w_check() {   // 경고 횟수에 따른 예약 가능여부 확인
         ConnectDB db = new ConnectDB();
         Connection conn = null;
         Statement st = null;
@@ -88,7 +88,7 @@ public class SeatSearchPage extends javax.swing.JFrame {
         try {
             conn = db.getConnection();
             st = conn.createStatement();
-            rs = st.executeQuery("select * from client where id='"+lg.getID()+"'");
+            rs = st.executeQuery("select * from client where id='" + lg.getID() + "'");
 
             ArrayList<String> warn_list = new ArrayList<String>();
 
@@ -97,7 +97,7 @@ public class SeatSearchPage extends javax.swing.JFrame {
             }
 
             for (int i = 0; i < warn_list.size(); i++) {
-                if (warn_list.get(i).compareTo("3")>=0) {   // 아이디가 있을 경우 예약 됨.
+                if (warn_list.get(i).compareTo("3") >= 0) {   // 아이디가 있을 경우 예약 됨.
                     return false;
                 }
             }
@@ -109,6 +109,10 @@ public class SeatSearchPage extends javax.swing.JFrame {
     }
 
     public void r_seat() {   // 좌석 선택 여부 확인
+        class_num = Integer.parseInt(class_combobox.getSelectedItem().toString());
+        starttime = start_combobox.getSelectedItem().toString();
+        endtime = end_combobox.getSelectedItem().toString();
+
         ConnectDB db = new ConnectDB();
         Connection conn = null;
         Statement st = null;
@@ -117,7 +121,7 @@ public class SeatSearchPage extends javax.swing.JFrame {
         try {
             conn = db.getConnection();
             st = conn.createStatement();
-            rs = st.executeQuery("select * from Reservation");
+            rs = st.executeQuery("select * from Reservation where class_num='" + class_num + "' and approve=1");
 
             ArrayList<String> seat_list = new ArrayList<String>();
             ArrayList<String> starttime_list = new ArrayList<String>();
@@ -128,6 +132,26 @@ public class SeatSearchPage extends javax.swing.JFrame {
                 starttime_list.add(rs.getString("r_starttime"));
                 endtime_list.add(rs.getString("r_endtime"));
             }
+
+            int[] r_time = new int[24];
+            int tmp = 0;
+            int count = 0;
+
+            for (int i = 0; i < seat_list.size(); i++) {
+                int start = Integer.parseInt(starttime_list.get(i).toString().substring(0, 2));
+                int end = Integer.parseInt(endtime_list.get(i).toString().substring(0, 2));
+
+                tmp = end - start;
+
+                for (int k = start; k < start + tmp; k++) {
+                    r_time[k] = 1;
+                }
+            }
+
+            int s_start = Integer.valueOf(starttime.substring(0, 2));
+            int s_end = Integer.valueOf(endtime.substring(0, 2));
+            int temp = s_end - s_start;
+
             String rbtn[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
                 "11", "12", "13", "14", "15", "16", "17", "18", "19", "20",
                 "21", "22", "23", "24", "25", "26", "27", "28", "29", "30",
@@ -138,18 +162,36 @@ public class SeatSearchPage extends javax.swing.JFrame {
                 r21, r22, r23, r24, r25, r26, r27, r28, r29, r30,
                 r31, r32, r33, r34, r35, r36, r37, r38, r39, r40};
 
-            for (int i = 0; i < rbtn.length; i++) {
-                if (r[i].isSelected()) {
-                    for (int j = 0; j < seat_list.size(); j++) {
-                        if (rbtn[i].equals(seat_list.get(j))) {
-                            JOptionPane.showMessageDialog(null, "이미 예약된 좌석입니다.");
+            for (int j = s_start; j < s_end + 1; j++) {
+                if (r_time[j] == 1) {
+                    for (int i = 0; i < rbtn.length; i++) {
+                        if (r[i].isSelected()) {
+                            for (int k = 0; k < seat_list.size(); k++) {
+                                if (rbtn[i].equals(seat_list.get(k))) {
+                                    JOptionPane.showMessageDialog(null, "이미 예약된 좌석입니다.");
+                                }
+                            }
+                            seat_num = Integer.parseInt(r[i].getText());
+                            System.out.println(seat_num);
                         }
                     }
-                    seat_num = Integer.parseInt(r[i].getText());
-                    System.out.println(seat_num);
+                } else if (count == temp) {
+                    for (int i = 0; i < rbtn.length; i++) {
+                        if (r[i].isSelected()) {
+                            for (int k = 0; k < seat_list.size(); k++) {
+                                if (rbtn[i].equals(seat_list.get(k))) {
+                                    JOptionPane.showMessageDialog(null, "이미 예약된 좌석입니다.");
+                                }
+                            }
+                            seat_num = Integer.parseInt(r[i].getText());
+                        }
+                    }
+                    cut_class();
                 }
+                count++;
             }
 
+            conn.close();
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -193,6 +235,7 @@ public class SeatSearchPage extends javax.swing.JFrame {
                 k_date = "토";
                 break;
         }
+
         final_date = year + "년" + month + "월" + date + "일";
         final_day = k_date;
     }
@@ -211,10 +254,78 @@ public class SeatSearchPage extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         if (d1.compareTo(d2) >= 0) {
-            System.out.println("16시 30분 이전");
             return true;
         }
         return false;
+    }
+
+    public void cut_class() {   // 17시 이후 예약일 경우 인원 제한
+
+        ConnectDB db = new ConnectDB();
+        Connection conn = null;
+        Statement st = null;
+        ResultSet rs = null;
+
+        int count915 = 0;
+        int count916 = 0;
+        int count918 = 0;
+        int count911 = 0;
+
+        try {
+            conn = db.getConnection();
+            st = conn.createStatement();
+            rs = st.executeQuery("select * from reservation where approve=1");
+
+            ArrayList id_list = new ArrayList<String>();
+            ArrayList classnum_list = new ArrayList<String>();
+            ArrayList classnum915_list = new ArrayList<String>();
+            ArrayList classnum916_list = new ArrayList<String>();
+            ArrayList classnum918_list = new ArrayList<String>();
+            ArrayList classnum911_list = new ArrayList<String>();
+
+            while (rs.next()) {
+                id_list.add(rs.getString("id"));
+                classnum_list.add(rs.getString("class_num"));
+            }
+
+            for (int i = 0; i < id_list.size(); i++) {
+                if (classnum_list.get(i).equals("915")) {
+                    classnum915_list.add(id_list.get(i));
+                    count915++;
+                } else if (classnum_list.get(i).equals("916")) {
+                    classnum916_list.add(id_list.get(i));
+                    count916++;
+                } else if (classnum_list.get(i).equals("918")) {
+                    classnum918_list.add(id_list.get(i));
+                    count918++;
+                } else if (classnum_list.get(i).equals("911")) {
+                    classnum911_list.add(id_list.get(i));
+                    count911++;
+                }
+            }
+
+            if (count915 < 25) {
+                Reservation r = new Reservation();
+                ResdbUpdate res = new ResdbUpdate(r);
+                r.setMeasurements(lg.getName(), lg.getID(), 915, seat_num, starttime, endtime, final_day, 0, 0);
+            } else if (count916 < 25) {
+                Reservation r = new Reservation();
+                ResdbUpdate res = new ResdbUpdate(r);
+                r.setMeasurements(lg.getName(), lg.getID(), 916, seat_num, starttime, endtime, final_day, 0, 0);
+            } else if (count918 < 25) {
+                Reservation r = new Reservation();
+                ResdbUpdate res = new ResdbUpdate(r);
+                r.setMeasurements(lg.getName(), lg.getID(), 918, seat_num, starttime, endtime, final_day, 0, 0);
+            } else if (count911 < 25) {
+                Reservation r = new Reservation();
+                ResdbUpdate res = new ResdbUpdate(r);
+                r.setMeasurements(lg.getName(), lg.getID(), 911, seat_num, starttime, endtime, final_day, 0, 0);
+            }
+
+            conn.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
     /**
@@ -948,18 +1059,19 @@ public class SeatSearchPage extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(r25)
-                    .addComponent(r26)
-                    .addComponent(r27)
-                    .addComponent(r28)
-                    .addComponent(r29)
-                    .addComponent(r30)
-                    .addComponent(r31)
-                    .addComponent(r32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(warn_button)
-                        .addComponent(warn_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(warn_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(r25)
+                        .addComponent(r26)
+                        .addComponent(r27)
+                        .addComponent(r28)
+                        .addComponent(r29)
+                        .addComponent(r30)
+                        .addComponent(r31)
+                        .addComponent(r32)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn25, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1278,17 +1390,16 @@ public class SeatSearchPage extends javax.swing.JFrame {
         starttime = start_combobox.getSelectedItem().toString();
         endtime = end_combobox.getSelectedItem().toString();
 
+        int count = 0;
+
         ConnectDB db = new ConnectDB();
         Connection conn = null;
         PreparedStatement ps = null;
         Statement st = null;
         ResultSet rs = null;
 
-        int count = 0;
-
         try {
             check_date();
-            r_seat();
 
             conn = db.getConnection();
             st = conn.createStatement();
@@ -1324,14 +1435,18 @@ public class SeatSearchPage extends javax.swing.JFrame {
             int s_end = Integer.valueOf(endtime.substring(0, 2));
             int temp = s_end - s_start;
 
-            for (int j = s_start; j < s_end + 1; j++) {
+            for (int j = s_start; j < s_end + 1; j++) { // 수업 시간표 및 세미나 겹치는지 확인
                 if (schedule[j] == 1) {
                     JOptionPane.showMessageDialog(null, "수업이 있는 강의실입니다.");
                     break;
                 } else if (count == temp) {
-                    Reservation r = new Reservation();
-                    ResdbUpdate res = new ResdbUpdate(r);
-                    r.setMeasurements(lg.getName(), lg.getID(), class_num, seat_num, starttime, endtime, final_day, 0, 0);
+                    if (9 <= s_start && s_end < 17) { // 9시~17시 사이에 예약일 경우 (approve=1)
+                        Reservation r = new Reservation();
+                        ResdbUpdate res = new ResdbUpdate(r);
+                        r.setMeasurements(lg.getName(), lg.getID(), class_num, seat_num, starttime, endtime, final_day, 0, 1);
+                    } else { // 9시~17시 사이에 예약이 아닐 경우 (approve=0)
+                        r_seat();
+                    }
                 }
                 count++;
             }
@@ -1478,7 +1593,7 @@ public class SeatSearchPage extends javax.swing.JFrame {
                 warn_list.add(rs.getString("warning"));
             }
 
-            for(int i=0;i<warn_list.size();i++){
+            for (int i = 0; i < warn_list.size(); i++) {
                 warn_textfield.setText((String) warn_list.get(i));
             }
 
