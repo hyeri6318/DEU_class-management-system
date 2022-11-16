@@ -36,12 +36,11 @@ public class StudentPage extends javax.swing.JFrame {
 
         searchClass_button = new javax.swing.JButton();
         searchTime_button = new javax.swing.JButton();
-        re_button = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        searchClass_button.setText("실습실 조회");
+        searchClass_button.setText("실습실 예약 및 조회");
         searchClass_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchClass_buttonActionPerformed(evt);
@@ -52,13 +51,6 @@ public class StudentPage extends javax.swing.JFrame {
         searchTime_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchTime_buttonActionPerformed(evt);
-            }
-        });
-
-        re_button.setText("실습실 예약");
-        re_button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                re_buttonActionPerformed(evt);
             }
         });
 
@@ -74,26 +66,23 @@ public class StudentPage extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(136, 136, 136)
+                .addGap(124, 124, 124)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(searchClass_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(searchTime_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(re_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(155, Short.MAX_VALUE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(66, 66, 66)
                 .addComponent(searchClass_button)
                 .addGap(26, 26, 26)
                 .addComponent(searchTime_button)
                 .addGap(29, 29, 29)
-                .addComponent(re_button)
-                .addGap(29, 29, 29)
                 .addComponent(jButton1)
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
 
         pack();
@@ -115,16 +104,9 @@ public class StudentPage extends javax.swing.JFrame {
 
         Concrete_TimeTable timetable = new Concrete_TimeTable(timeReceiver);
 
-        InVoker button4 = new InVoker(timetable);
-        button4.pressed();
+        InVoker button2 = new InVoker(timetable);
+        button2.pressed();
     }//GEN-LAST:event_searchTime_buttonActionPerformed
-
-    private void re_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_re_buttonActionPerformed
-        // TODO add your handling code here:
-
-        SeatSearchPage re = new SeatSearchPage();
-        re.setVisible(true);
-    }//GEN-LAST:event_re_buttonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -169,7 +151,6 @@ public class StudentPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton re_button;
     private javax.swing.JButton searchClass_button;
     private javax.swing.JButton searchTime_button;
     // End of variables declaration//GEN-END:variables

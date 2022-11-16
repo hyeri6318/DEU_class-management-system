@@ -78,6 +78,35 @@ public class SeatSearchPage extends javax.swing.JFrame {
         }
         return true;
     }
+    
+       public boolean w_check(){   // 경고 횟수에 따른 예약 가능여부 확인
+        ConnectDB db = new ConnectDB();
+        Connection conn = null;
+        Statement st = null;
+        ResultSet rs = null;
+
+        try {
+            conn = db.getConnection();
+            st = conn.createStatement();
+            rs = st.executeQuery("select * from client where id='"+lg.getID()+"'");
+
+            ArrayList<String> warn_list = new ArrayList<String>();
+
+            while (rs.next()) {
+                warn_list.add(rs.getString("warning"));
+            }
+
+            for (int i = 0; i < warn_list.size(); i++) {
+                if (warn_list.get(i).compareTo("3")>=0) {   // 아이디가 있을 경우 예약 됨.
+                    return false;
+                }
+            }
+            conn.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return true;
+    }
 
     public void r_seat() {   // 좌석 선택 여부 확인
         ConnectDB db = new ConnectDB();
