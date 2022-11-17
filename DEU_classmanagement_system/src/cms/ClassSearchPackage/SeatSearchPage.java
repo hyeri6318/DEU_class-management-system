@@ -190,7 +190,6 @@ public class SeatSearchPage extends javax.swing.JFrame {
                                 }
                             }
                             seat_num = Integer.parseInt(r[i].getText());
-                            System.out.println(seat_num);
                         }
                     }
                 } else if (count == temp) {
@@ -204,7 +203,6 @@ public class SeatSearchPage extends javax.swing.JFrame {
                             seat_num = Integer.parseInt(r[i].getText());
                         }
                     }
-                    cut_class();
                 }
                 count++;
             }
@@ -1455,11 +1453,13 @@ public class SeatSearchPage extends javax.swing.JFrame {
                     break;
                 } else if (count == temp) {
                     if (9 <= s_start && s_end < 17) { // 9시~17시 사이에 예약일 경우 (approve=1)
+                       r_seat();
                         Reservation r = new Reservation();
                         ResdbUpdate res = new ResdbUpdate(r);
                         r.setMeasurements(lg.getName(), lg.getID(), class_num, seat_num, starttime, endtime, final_day, 0, 1);
                     } else { // 9시~17시 사이에 예약이 아닐 경우 (approve=0)
                         r_seat();
+                         cut_class();
                     }
                 }
                 count++;

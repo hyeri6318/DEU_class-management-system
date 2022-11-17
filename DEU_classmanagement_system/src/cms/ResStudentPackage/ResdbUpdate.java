@@ -82,7 +82,7 @@ public class ResdbUpdate implements ResObserver {
 
                     ps.executeUpdate();
 
-                    JOptionPane.showMessageDialog(null, "이미 예약된 좌석입니다.");
+                    JOptionPane.showMessageDialog(null, "예약 되었습니다.");
                 } else {
                     JOptionPane.showMessageDialog(null, "경고로 인해 예약이 제한되었습니다.");
                 }

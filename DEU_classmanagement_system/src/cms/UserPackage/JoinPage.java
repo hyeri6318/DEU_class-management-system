@@ -25,7 +25,7 @@ public class JoinPage extends javax.swing.JFrame {
         initComponents();
     }
 
-        String type = null;
+    String type = null;
 
     private boolean UserTypeCheck() {    // 사용자를 구분하기 위함.
 
@@ -71,7 +71,7 @@ public class JoinPage extends javax.swing.JFrame {
         }
         return false;
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -189,7 +189,7 @@ public class JoinPage extends javax.swing.JFrame {
 
         try {
             conn = db.getConnection();
-            ps = conn.prepareStatement("insert into Client values(?,?,?,?,?,?,?)");
+            ps = conn.prepareStatement("insert into Client values(?,?,?,?,?,?,?,?)");
 
             if (tokencheck) {
                 if (usertype) {
@@ -200,6 +200,7 @@ public class JoinPage extends javax.swing.JFrame {
                     ps.setString(5, name_input.getText());
                     ps.setString(6, tel_input.getText());
                     ps.setString(7, email_input.getText());
+                    ps.setDate(8, null);    // 경고 날짜
 
                     ps.executeUpdate();
 
