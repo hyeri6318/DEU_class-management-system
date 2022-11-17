@@ -49,6 +49,12 @@ public class SeatSearchPage extends javax.swing.JFrame {
     int approve;
 
     String final_date;
+       
+    // 날짜, 요일 추출을 위한 변수
+    int year ;
+    int month;
+    int date;
+    int day;
 
     public boolean r_check() {  // 예약 여부 확인
         ConnectDB db = new ConnectDB();
@@ -82,23 +88,35 @@ public class SeatSearchPage extends javax.swing.JFrame {
     public boolean w_check() {   // 경고 횟수에 따른 예약 가능여부 확인
         ConnectDB db = new ConnectDB();
         Connection conn = null;
+        PreparedStatement ps = null;
         Statement st = null;
         ResultSet rs = null;
 
         try {
+            check_date();
+
             conn = db.getConnection();
             st = conn.createStatement();
             rs = st.executeQuery("select * from client where id='" + lg.getID() + "'");
 
             ArrayList<String> warn_list = new ArrayList<String>();
+            ArrayList<String> date_list = new ArrayList<String>();
 
             while (rs.next()) {
                 warn_list.add(rs.getString("warning"));
+                date_list.add(rs.getString("w_date"));
             }
 
             for (int i = 0; i < warn_list.size(); i++) {
                 if (warn_list.get(i).compareTo("3") >= 0) {   // 아이디가 있을 경우 예약 됨.
-                    return false;
+                    int w_check = Integer.valueOf(date_list.get(i).substring(8, 10));
+                    if (w_check == date) {  // 경고 받은 날로부터 일주일이 지났는지 확인
+                        ps = conn.prepareStatement("update Client set warning=0, w_date=null where id='" + lg.getID() + "'");
+                        ps.executeUpdate();
+                        return false;
+                    } else {
+                        return false;
+                    }
                 }
             }
             conn.close();
@@ -202,10 +220,6 @@ public class SeatSearchPage extends javax.swing.JFrame {
     public void check_date() {  // 날짜, 요일 추출을 위한 메서드
 
         Calendar c = Calendar.getInstance();
-        int year;
-        int month;
-        int date;
-        int day;
 
         year = c.get(Calendar.YEAR);
         month = c.get(Calendar.MONTH) + 1;
