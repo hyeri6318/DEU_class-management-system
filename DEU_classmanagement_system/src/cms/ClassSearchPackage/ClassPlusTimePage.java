@@ -109,6 +109,7 @@ public class ClassPlusTimePage extends javax.swing.JFrame {
         int classNum = 0;
         int seatNum = 0;
         int rtime = 0;
+        int approve=0;
    
         String final_time = time_combobox.getSelectedItem().toString();
         int select_time = Integer.parseInt(final_time.substring(0,2));
@@ -123,17 +124,22 @@ public class ClassPlusTimePage extends javax.swing.JFrame {
             ArrayList class_list = new ArrayList<String>();
             ArrayList seat_list = new ArrayList<String>();
             ArrayList time_list = new ArrayList<String>();  // r_endtime 저장
+            ArrayList approve_list = new ArrayList<String>();
 
             while (rs1.next()) {
                 class_list.add(rs1.getString("class_num"));
                 seat_list.add(rs1.getString("seat_num"));
                 time_list.add(rs1.getString("r_endtime"));
+                approve_list.add(rs1.getString("approve"));
             }
 
             for (int i = 0; i < time_list.size(); i++) {
                 classNum = Integer.parseInt(class_list.get(i).toString());
                 rtime = Integer.parseInt(time_list.get(i).toString().substring(0, 2));
                 seatNum = Integer.parseInt(seat_list.get(i).toString());
+                if(Integer.parseInt(approve_list.get(i).toString())==0){
+                    JOptionPane.showMessageDialog(null, "예약x");
+                }
             }
 
             if (select_time > rtime) {
