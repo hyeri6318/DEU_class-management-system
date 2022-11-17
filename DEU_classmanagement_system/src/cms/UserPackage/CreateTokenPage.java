@@ -104,7 +104,7 @@ public class CreateTokenPage extends javax.swing.JFrame {
         try {
             conn = db.getConnection();
 
-            if (currentDate.equals("11/17") || currentDate.equals("11/20")) {
+            if (currentDate.equals("3/1") || currentDate.equals("9/1")) {
                 JOptionPane.showMessageDialog(null, "토큰 생성 기간이 아닙니다.");
             } else {
                 ps = conn.prepareStatement("insert into Token values(?,?,?)");
