@@ -38,6 +38,7 @@ public class CheckSuggestionPage extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         suggest_table = new javax.swing.JTable();
         s_button = new javax.swing.JToggleButton();
+        exit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,6 +59,13 @@ public class CheckSuggestionPage extends javax.swing.JFrame {
             }
         });
 
+        exit.setText("이전");
+        exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -66,8 +74,10 @@ public class CheckSuggestionPage extends javax.swing.JFrame {
                 .addGap(35, 35, 35)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
-                .addComponent(s_button)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(s_button))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -76,7 +86,9 @@ public class CheckSuggestionPage extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(s_button)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(209, Short.MAX_VALUE))
+                .addGap(9, 9, 9)
+                .addComponent(exit)
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         pack();
@@ -138,6 +150,11 @@ public class CheckSuggestionPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_s_buttonActionPerformed
 
+    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
+        //종료
+        dispose();
+    }//GEN-LAST:event_exitActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -175,6 +192,7 @@ public class CheckSuggestionPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton exit;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JToggleButton s_button;
     protected static javax.swing.JTable suggest_table;

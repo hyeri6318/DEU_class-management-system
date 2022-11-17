@@ -38,6 +38,7 @@ public class StudentPage extends javax.swing.JFrame {
         searchTime_button = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         plustime_button = new javax.swing.JButton();
+        logoutBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,6 +70,13 @@ public class StudentPage extends javax.swing.JFrame {
             }
         });
 
+        logoutBtn.setText("로그아웃");
+        logoutBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -81,6 +89,10 @@ public class StudentPage extends javax.swing.JFrame {
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(plustime_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(135, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(logoutBtn)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -93,7 +105,9 @@ public class StudentPage extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
                 .addComponent(plustime_button)
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addComponent(logoutBtn)
+                .addContainerGap())
         );
 
         pack();
@@ -130,6 +144,13 @@ public class StudentPage extends javax.swing.JFrame {
         ClassPlusTimePage plus = new ClassPlusTimePage();
         plus.setVisible(true);
     }//GEN-LAST:event_plustime_buttonActionPerformed
+
+    private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBtnActionPerformed
+        // 로그아웃 기능 구현
+        LoginPage e = new LoginPage();
+        e.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_logoutBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,6 +189,7 @@ public class StudentPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton logoutBtn;
     private javax.swing.JButton plustime_button;
     private javax.swing.JButton searchClass_button;
     private javax.swing.JButton searchTime_button;

@@ -37,13 +37,13 @@ public class PageSuggestion extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         suggest = new javax.swing.JButton();
-        cancel = new javax.swing.JButton();
         classnum_combobox = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         title_textfield = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         suggestionTextField = new javax.swing.JTextField();
+        exit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,13 +53,6 @@ public class PageSuggestion extends javax.swing.JFrame {
         suggest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 suggestActionPerformed(evt);
-            }
-        });
-
-        cancel.setText("취소");
-        cancel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancelActionPerformed(evt);
             }
         });
 
@@ -74,6 +67,13 @@ public class PageSuggestion extends javax.swing.JFrame {
         suggestionTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 suggestionTextFieldActionPerformed(evt);
+            }
+        });
+
+        exit.setText("이전");
+        exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitActionPerformed(evt);
             }
         });
 
@@ -102,8 +102,8 @@ public class PageSuggestion extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(113, 113, 113)
                         .addComponent(suggest, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(57, 57, 57)
-                        .addComponent(cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(49, 49, 49)
                         .addComponent(suggestionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -129,7 +129,7 @@ public class PageSuggestion extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(suggest)
-                    .addComponent(cancel))
+                    .addComponent(exit))
                 .addGap(35, 35, 35))
         );
 
@@ -178,13 +178,14 @@ public class PageSuggestion extends javax.swing.JFrame {
         sg.setMeasurements(suggestNum, lg.getID(), classNum, title,content);
     }//GEN-LAST:event_suggestActionPerformed
 
-    private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
-        dispose();
-    }//GEN-LAST:event_cancelActionPerformed
-
     private void suggestionTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suggestionTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_suggestionTextFieldActionPerformed
+
+    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
+        //종료
+        dispose();
+    }//GEN-LAST:event_exitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -223,8 +224,8 @@ public class PageSuggestion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton cancel;
     private javax.swing.JComboBox<String> classnum_combobox;
+    private javax.swing.JButton exit;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

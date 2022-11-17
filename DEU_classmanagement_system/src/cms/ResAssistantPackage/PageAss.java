@@ -5,6 +5,7 @@
  */
 package cms.ResAssistantPackage;
 
+import cms.UserPackage.LoginPage;
 import cmsSuggestionPackage.CheckSuggestionPage;
 
 /**
@@ -33,6 +34,7 @@ public class PageAss extends javax.swing.JFrame {
         ResAccept = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        logoutBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,6 +61,13 @@ public class PageAss extends javax.swing.JFrame {
             }
         });
 
+        logoutBtn.setText("로그아웃");
+        logoutBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -70,11 +79,16 @@ public class PageAss extends javax.swing.JFrame {
                 .addComponent(ResCancle)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(135, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(108, 108, 108))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(108, 108, 108))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(logoutBtn)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,7 +100,9 @@ public class PageAss extends javax.swing.JFrame {
                     .addComponent(ResAccept)
                     .addComponent(ResCancle)
                     .addComponent(jButton1))
-                .addGap(68, 68, 68))
+                .addGap(35, 35, 35)
+                .addComponent(logoutBtn)
+                .addContainerGap())
         );
 
         pack();
@@ -111,6 +127,13 @@ public class PageAss extends javax.swing.JFrame {
         CheckSuggestionPage check = new CheckSuggestionPage();
         check.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBtnActionPerformed
+        // 로그아웃 기능 구현
+        LoginPage e = new LoginPage();
+        e.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_logoutBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -152,5 +175,6 @@ public class PageAss extends javax.swing.JFrame {
     private javax.swing.JButton ResCancle;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton logoutBtn;
     // End of variables declaration//GEN-END:variables
 }
