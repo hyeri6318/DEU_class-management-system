@@ -37,6 +37,7 @@ public class StudentPage extends javax.swing.JFrame {
         searchClass_button = new javax.swing.JButton();
         searchTime_button = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        plustime_button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,6 +62,13 @@ public class StudentPage extends javax.swing.JFrame {
             }
         });
 
+        plustime_button.setText("실습실 시간 연장");
+        plustime_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                plustime_buttonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -70,7 +78,8 @@ public class StudentPage extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(searchClass_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(searchTime_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(plustime_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(135, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -82,7 +91,9 @@ public class StudentPage extends javax.swing.JFrame {
                 .addComponent(searchTime_button)
                 .addGap(29, 29, 29)
                 .addComponent(jButton1)
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(plustime_button)
+                .addContainerGap(69, Short.MAX_VALUE))
         );
 
         pack();
@@ -113,6 +124,12 @@ public class StudentPage extends javax.swing.JFrame {
         PageSuggestion suggest = new PageSuggestion();
         suggest.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void plustime_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plustime_buttonActionPerformed
+        // TODO add your handling code here:
+        ClassPlusTimePage plus = new ClassPlusTimePage();
+        plus.setVisible(true);
+    }//GEN-LAST:event_plustime_buttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,6 +168,7 @@ public class StudentPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton plustime_button;
     private javax.swing.JButton searchClass_button;
     private javax.swing.JButton searchTime_button;
     // End of variables declaration//GEN-END:variables

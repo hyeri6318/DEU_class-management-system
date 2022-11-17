@@ -207,17 +207,17 @@ public class JoinPage extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, "회원가입이 완료되었습니다.");
 
                 } else {
-                    JOptionPane.showMessageDialog(null, "옳바르지 않은 사용자 유형입니다.");
+                    JOptionPane.showMessageDialog(null, "올바르지 않은 사용자 유형입니다.");
                     id_input.setText(null);
                 }
             } else {
-                JOptionPane.showMessageDialog(null, "옳바르지 않은 토큰값 입니다.");
+                JOptionPane.showMessageDialog(null, "올바르지 않은 토큰값 입니다.");
                 token_input.setText(null);
             }
             conn.close();
         } catch (Exception ex) {
             ex.printStackTrace();
-            JOptionPane.showMessageDialog(null, "옳바르지 않은 입력입니다. 다시 입력해주세요.");
+            JOptionPane.showMessageDialog(null, "올바르지 않은 입력입니다. 다시 입력해주세요.");
             id_input.setText(null);
         }
     }//GEN-LAST:event_joinActionPerformed
