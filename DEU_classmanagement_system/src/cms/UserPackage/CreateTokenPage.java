@@ -8,6 +8,8 @@ import cms.ConnectDB.ConnectDB;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import javax.swing.JOptionPane;
 
@@ -94,17 +96,27 @@ public class CreateTokenPage extends javax.swing.JFrame {
 
         CreateTokenPage c = new CreateTokenPage();
         c.Create();
+
+        LocalDateTime localDateTime = LocalDateTime.now();
+        DateTimeFormatter formatTime = DateTimeFormatter.ofPattern("MM/dd");
+        String currentDate = localDateTime.format(formatTime);
+
         try {
             conn = db.getConnection();
-            ps = conn.prepareStatement("insert into Token values(?,?,?)");
 
-            ps.setString(1, c.token);
-            ps.setInt(2, c.year);
-            ps.setInt(3, c.semester);
+            if (currentDate.equals("11/17") || currentDate.equals("11/20")) {
+                JOptionPane.showMessageDialog(null, "토큰 생성 기간이 아닙니다.");
+            } else {
+                ps = conn.prepareStatement("insert into Token values(?,?,?)");
 
-            ps.executeUpdate();
+                ps.setString(1, c.token);
+                ps.setInt(2, c.year);
+                ps.setInt(3, c.semester);
 
-            JOptionPane.showMessageDialog(null, c.token + " 토큰 생성이 완료되었습니다.");
+                ps.executeUpdate();
+
+                JOptionPane.showMessageDialog(null, c.token + " 토큰 생성이 완료되었습니다.");
+            }
         } catch (Exception ex) {
             ex.printStackTrace();
         }
