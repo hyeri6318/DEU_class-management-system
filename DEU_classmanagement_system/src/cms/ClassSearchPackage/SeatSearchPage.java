@@ -1445,7 +1445,7 @@ public class SeatSearchPage extends javax.swing.JFrame {
                 end_list.add(rs.getString("l_endtime"));
             }
             // 배열에 넣을 시간을 임시 저장할 배열
-            int[] schedule = new int[24];
+            int[] schedule = new int[25];
             int tmp = 0;
 
             // 수업이 있는 시간표 추출

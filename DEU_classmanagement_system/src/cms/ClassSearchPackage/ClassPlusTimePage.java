@@ -109,8 +109,9 @@ public class ClassPlusTimePage extends javax.swing.JFrame {
         int classNum = 0;
         int seatNum = 0;
         int rtime = 0;
-
-        int select_time = Integer.parseInt(time_combobox.getSelectedItem().toString());
+   
+        String final_time = time_combobox.getSelectedItem().toString();
+        int select_time = Integer.parseInt(final_time.substring(0,2));
 
         try {
 
@@ -139,7 +140,6 @@ public class ClassPlusTimePage extends javax.swing.JFrame {
 
                 // reservation 전체 확인
                 rs2 = st.executeQuery("select id from reservation where class_num='" + classNum + "' and seat_num='" + seatNum + "' and approve=1 and substr(r_starttime,0,2) > '" + select_time + "'");
-                System.out.println("e");
                 ArrayList id_list = new ArrayList<String>();
 
                 while (rs2.next()) {
@@ -148,7 +148,7 @@ public class ClassPlusTimePage extends javax.swing.JFrame {
 
                 if (id_list.isEmpty()) {
                     System.out.println("B");
-                    query = conn.prepareStatement("UPDATE RESERVATION SET R_ENDTIME = '" + select_time + ":00:00' where id = '" + lg.getID() + "'");
+                    query = conn.prepareStatement("UPDATE RESERVATION SET R_ENDTIME = '" + final_time +"' where id = '" + lg.getID() + "'");
                     query.executeUpdate();
                     JOptionPane.showMessageDialog(null, "시간 연장이 되었습니다.");
                 } else {
