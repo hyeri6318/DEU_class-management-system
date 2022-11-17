@@ -7,11 +7,14 @@ package cms.UserPackage;
 import cms.ClassSearchPackage.StudentPage;
 import cms.ConnectDB.ConnectDB;
 import cms.ResAssistantPackage.PageAss;
+import cms.SchedulePackage.ProfessorMain;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.JOptionPane;
@@ -67,6 +70,7 @@ public class LoginPage extends javax.swing.JFrame {
                         final_pw = pw_list.get(index);
                         final_name = name_list.get(index);
 
+                        //reset();
                         reservation_check();    // 예약 시간 확인 및 삭제
 
                         StudentPage student = new StudentPage();
@@ -75,18 +79,21 @@ public class LoginPage extends javax.swing.JFrame {
                         final_id = id_list.get(index);
                         final_pw = pw_list.get(index);
 
-                        DeleteInformPage delete = new DeleteInformPage();
-                        delete.setVisible(true);
+                        //reset()
+                        ProfessorMain professor = new ProfessorMain();
+                        professor.setVisible(true);
                     } else if (check == 65) {
                         final_id = id_list.get(index);
                         final_pw = pw_list.get(index);
 
+                        //reset()
                         PageAss ass = new PageAss();
                         ass.setVisible(true);
                     } else if (check == 77) {
                         final_id = id_list.get(index);
                         final_pw = pw_list.get(index);
 
+                        //reset()
                         CreateTokenPage token = new CreateTokenPage();
                         token.setVisible(true);
                     }
@@ -105,8 +112,8 @@ public class LoginPage extends javax.swing.JFrame {
         }
         return false;
     }
-    
-       public void reservation_check() {  // 예약 시간 확인 및 삭제
+
+    public void reservation_check() {  // 예약 시간 확인 및 삭제
         Date d1 = null;
         Date d2 = null;
 
@@ -147,6 +154,31 @@ public class LoginPage extends javax.swing.JFrame {
                 }
             }
             conn.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public void reset() {   // 3/1 혹은 9/1일 경우 초기화
+        ConnectDB db = new ConnectDB();
+        Connection conn = null;
+        PreparedStatement ps1 = null;
+        PreparedStatement ps2 = null;
+
+        LocalDateTime localDateTime = LocalDateTime.now();
+        DateTimeFormatter formatTime = DateTimeFormatter.ofPattern("MM/dd");
+        String currentDate = localDateTime.format(formatTime);
+
+        try {
+            conn = db.getConnection();
+
+            if (currentDate.equals("11/18") || currentDate.equals("9/1")) {
+                ps1 = conn.prepareStatement("delete from client where id<>2022");
+                ps2 = conn.prepareStatement("delete from token");
+
+                ps1.executeUpdate();
+                ps2.executeUpdate();
+            }
         } catch (Exception ex) {
             ex.printStackTrace();
         }
