@@ -8,9 +8,12 @@ import cms.ClassSearchPackage.StudentPage;
 import cms.ConnectDB.ConnectDB;
 import cms.ResAssistantPackage.PageAss;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /**
@@ -64,6 +67,8 @@ public class LoginPage extends javax.swing.JFrame {
                         final_pw = pw_list.get(index);
                         final_name = name_list.get(index);
 
+                        reservation_check();    // 예약 시간 확인 및 삭제
+
                         StudentPage student = new StudentPage();
                         student.setVisible(true);
                     } else if (check == 80) {
@@ -99,6 +104,52 @@ public class LoginPage extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         return false;
+    }
+    
+       public void reservation_check() {  // 예약 시간 확인 및 삭제
+        Date d1 = null;
+        Date d2 = null;
+
+        ConnectDB db = new ConnectDB();
+        Connection conn = null;
+        PreparedStatement ps = null;
+        Statement st = null;
+        ResultSet rs = null;
+
+        try {
+            Date currentTime = new Date();
+            SimpleDateFormat SimpleDateFormat = new SimpleDateFormat("HH:mm:ss");
+            SimpleDateFormat f = new SimpleDateFormat("HH:mm:ss");
+
+            d1 = f.parse(SimpleDateFormat.format(currentTime));
+
+            conn = db.getConnection();
+            st = conn.createStatement();
+
+            rs = st.executeQuery("select * from reservation where id='" + id_input.getText() + "'");
+
+            ArrayList time_list = new ArrayList<String>();
+
+            while (rs.next()) {
+                time_list.add(rs.getString("r_endtime"));
+            }
+
+            if (time_list.isEmpty()) {
+
+            } else {
+                for (int i = 0; i < time_list.size(); i++) {
+                    d2 = f.parse(time_list.get(i).toString());
+                }
+
+                if (d1.compareTo(d2) >= 0) {
+                    ps = conn.prepareStatement("delete from reservation where id='" + id_input.getText() + "'");
+                    ps.executeUpdate();
+                }
+            }
+            conn.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
     private String ID = null;
