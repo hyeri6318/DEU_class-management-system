@@ -57,20 +57,6 @@ public class PageRes extends javax.swing.JFrame {
         return false;
     }
 
-    //테이블에서 학생 선택
-    public void selectTable() {
-        TableModel model1 = jTable1.getModel(); // 테이블 저장
-        int[] indexs = jTable1.getSelectedRows(); // 테이블에 있는 열 저장
-
-        DefaultTableModel model2 = (DefaultTableModel) jTable1.getModel();
-
-//        for (int i = 0; i < indexs.length; i++) {
-//            if (score_check == 0) {
-//                row[1] = model1.getValueAt(indexs[i], 1);
-//            }
-//        }
-    }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -185,12 +171,38 @@ public class PageRes extends javax.swing.JFrame {
 
     private void rejectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rejectActionPerformed
         //거절버튼, 사용자 예약 요청 delete
-        for (int i = 0; i < jTable1.getRowCount(); i++) {
-            id = jTable1.getValueAt(i, 1).toString();
-        }
-        user.rnUnresUser(id);
+        ConnectDB db = new ConnectDB();
+        Connection conn = null;
+        PreparedStatement query = null;
+        PreparedStatement ps = null;
+        Statement st = null;
+        ResultSet rs = null;
 
-        JOptionPane.showMessageDialog(null, "예약을 거절했습니다.");
+        try {
+            conn = db.getConnection();
+            st = conn.createStatement();
+
+            TableModel model1 = PageRes.jTable1.getModel();
+            int[] indexs = PageRes.jTable1.getSelectedRows();
+
+            Object[] row = new Object[9];
+
+            for (int i = 0; i < indexs.length; i++) {
+                row[1] = model1.getValueAt(indexs[i], 1);
+                row[2] = model1.getValueAt(indexs[i], 2);
+            }
+
+            ArrayList id_list = new ArrayList<String>();
+
+            query = conn.prepareStatement("delete reservation where id='" + row[1] + "'");
+            query.executeUpdate();
+
+            JOptionPane.showMessageDialog(null, "예약을 거절했습니다.");
+
+            conn.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         dispose();
     }//GEN-LAST:event_rejectActionPerformed
 
@@ -198,12 +210,11 @@ public class PageRes extends javax.swing.JFrame {
         //talbe에 예약 승인 요청상태(approve == 0)인 사용자 출력
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         user.iqResUser(model);
-//        for (int i = 0; i < jTable1.getRowCount(); i++) {
-//            for (int k = 0; k < jTable1.getColumnCount(); k++) {
-//                id = jTable1.getValueAt(i, k).toString();
-//            }
-//        }
-        selectTable();
+        for (int i = 0; i < jTable1.getRowCount(); i++) {
+            for (int k = 0; k < jTable1.getColumnCount(); k++) {
+                id = jTable1.getValueAt(i, k).toString();
+            }
+        }
     }//GEN-LAST:event_searchActionPerformed
 
     /**
