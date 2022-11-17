@@ -13,6 +13,7 @@ import cms.ConnectDB.ConnectDB;
 import java.sql.Connection;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -42,6 +43,7 @@ public class ConfirmUnres implements Confirm {
             ArrayList rEndTime = new ArrayList<String>();
             ArrayList admin = new ArrayList<String>();
             ArrayList approve = new ArrayList<String>();
+            ArrayList day = new ArrayList<String>();
 
             while (rs.next()) {
                 name.add(rs.getString("NAME"));
@@ -52,6 +54,7 @@ public class ConfirmUnres implements Confirm {
                 rEndTime.add(rs.getString("R_ENDTIME"));
                 admin.add(rs.getString("ADMIN"));
                 approve.add(rs.getString("APPROVE"));
+                day.add(rs.getString("day"));
             }
 
             Object[] tableline = name.toArray();
@@ -68,8 +71,9 @@ public class ConfirmUnres implements Confirm {
                 arr.add(rEndTime.get(i));
                 arr.add(admin.get(i));
                 arr.add(approve.get(i));
+                arr.add(day.get(i));
 
-                model.addRow(new Object[]{arr.get(0), arr.get(1), arr.get(2), arr.get(3), arr.get(4), arr.get(5), arr.get(6), arr.get(7)});
+                model.addRow(new Object[]{arr.get(0), arr.get(1), arr.get(2), arr.get(3), arr.get(4), arr.get(5), arr.get(6), arr.get(7), arr.get(8)});
             }
             conn.close();
         } catch (Exception ex) {
@@ -80,13 +84,23 @@ public class ConfirmUnres implements Confirm {
     @Override
     //db에서 해당 사용자의 예약 정보를 delete하기
     public void renewal(String id) {
-
         try {
             conn = db.getConnection();
             st = conn.createStatement();
 
-            query = conn.prepareStatement("DELETE FROM RESERVATION WHERE ID = '" + id + "'");
+            TableModel model1 = PageUnres.jTable1.getModel();
+            int[] indexs = PageUnres.jTable1.getSelectedRows();
+
+            Object[] row = new Object[9];
+
+            for (int i = 0; i < indexs.length; i++) {
+                row[1] = model1.getValueAt(indexs[i], 1);
+                row[2] = model1.getValueAt(indexs[i], 2);
+            }
+
+            query = conn.prepareStatement("delete reservation where id='" + row[1] + "'");
             query.executeUpdate();
+
             conn.close();
         } catch (Exception ex) {
             ex.printStackTrace();

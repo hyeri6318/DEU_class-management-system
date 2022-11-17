@@ -111,18 +111,21 @@ public class PageUnres extends javax.swing.JFrame {
     }//GEN-LAST:event_exitActionPerformed
 
     private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
-        //talbe에 예약 승인된(check == 1) 사용자 출력
+       //talbe에 예약 승인된(check == 1) 사용자 출력
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         user.iqUnresUser(model);
+        for (int i = 0; i < jTable1.getRowCount(); i++) {
+            for (int k = 0; k < jTable1.getColumnCount(); k++) {
+                id = jTable1.getValueAt(i, k).toString();
+            }
+        }
     }//GEN-LAST:event_searchActionPerformed
 
     private void rejectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rejectActionPerformed
         //취소버튼, 사용자 예약 delete
-        for (int i = 0; i < jTable1.getRowCount(); i++) {
-                id = jTable1.getValueAt(i, 1).toString();
-        }
+        
         user.rnUnresUser(id);
-        JOptionPane.showMessageDialog(null, "예약을 거절했습니다.");
+        JOptionPane.showMessageDialog(null, "예약을 취소했습니다.");
         dispose();
     }//GEN-LAST:event_rejectActionPerformed
 
@@ -164,7 +167,7 @@ public class PageUnres extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton exit;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    protected static javax.swing.JTable jTable1;
     private javax.swing.JButton reject;
     private javax.swing.JButton search;
     // End of variables declaration//GEN-END:variables
