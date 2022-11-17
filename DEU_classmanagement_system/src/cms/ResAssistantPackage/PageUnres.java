@@ -5,8 +5,17 @@
  */
 package cms.ResAssistantPackage;
 
+import cms.ConnectDB.ConnectDB;
+import java.util.ArrayList;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -20,9 +29,14 @@ public class PageUnres extends javax.swing.JFrame {
     public PageUnres() {
         initComponents();
     }
-    
+
     User user = new User();
+    ConnectDB db = new ConnectDB();
+    Connection conn = null;
+    PreparedStatement query = null;
+    Statement st = null;
     String id = "";
+    int classNum = 0;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -111,7 +125,7 @@ public class PageUnres extends javax.swing.JFrame {
     }//GEN-LAST:event_exitActionPerformed
 
     private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
-       //talbe에 예약 승인된(check == 1) 사용자 출력
+        //talbe에 예약 승인된(check == 1) 사용자 출력
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         user.iqUnresUser(model);
         for (int i = 0; i < jTable1.getRowCount(); i++) {
@@ -123,9 +137,38 @@ public class PageUnres extends javax.swing.JFrame {
 
     private void rejectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rejectActionPerformed
         //취소버튼, 사용자 예약 delete
-        
-        user.rnUnresUser(id);
-        JOptionPane.showMessageDialog(null, "예약을 취소했습니다.");
+        ConnectDB db = new ConnectDB();
+        Connection conn = null;
+        PreparedStatement query = null;
+        PreparedStatement ps = null;
+        Statement st = null;
+        ResultSet rs = null;
+
+        try {
+            conn = db.getConnection();
+            st = conn.createStatement();
+
+            TableModel model1 = PageRes.jTable1.getModel();
+            int[] indexs = PageRes.jTable1.getSelectedRows();
+
+            Object[] row = new Object[9];
+
+            for (int i = 0; i < indexs.length; i++) {
+                row[1] = model1.getValueAt(indexs[i], 1);
+                row[2] = model1.getValueAt(indexs[i], 2);
+            }
+
+            ArrayList id_list = new ArrayList<String>();
+
+            query = conn.prepareStatement("delete reservation where id='" + row[1] + "'");
+            query.executeUpdate();
+
+            JOptionPane.showMessageDialog(null, "예약을 취소했습니다.");
+
+            conn.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         dispose();
     }//GEN-LAST:event_rejectActionPerformed
 
