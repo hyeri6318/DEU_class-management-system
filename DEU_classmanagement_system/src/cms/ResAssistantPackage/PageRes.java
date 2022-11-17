@@ -11,6 +11,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
@@ -36,32 +38,24 @@ public class PageRes extends javax.swing.JFrame {
     String id = "";
     int classNum = 0;
 
-    //관리자 권한 부여
-//    public void selectAdminister() {
-//
-//        try {
-//            conn = db.getConnection();
-//            st = conn.createStatement();
-//
-//            ResultSet rs1 = null;
-//            ResultSet rs2 = null;
-//            ResultSet rs3 = null;
-//
-//            ArrayList studentId = new ArrayList<String>();
-//            rs1 = st.executeQuery("UPDATE RESERVATION SET ADMIN = 0 WHERE CLASS_NUM = '" + classNum + "'");
-//            rs2 = st.executeQuery("SELECT ID FROM RESERVATION WHERE CLASS_NUM = '" + classNum + "' ORDER BY R_ENDTIME DESC");
-//
-//            while (rs2.next()) {
-//                studentId.add(rs2.getString("l_endtime"));
-//            }
-//
-//            String adminStudent = studentId.get(0).toString();
-//
-//            rs3 = st.executeQuery("UPDATE RESERVATION SET ADMIN = 1 WHERE ID ='" + adminStudent + "'");
-//        } catch (Exception ex) {
-//            ex.printStackTrace();
-//        }
-//    }
+    public boolean timecheck() {   // 16시 30분 이전에 예약하는지 확인
+        Date d1 = null;
+        Date d2 = null;
+        try {
+            Date currentTime = new Date();
+            SimpleDateFormat SimpleDateFormat = new SimpleDateFormat("HH:mm:ss");
+            SimpleDateFormat f = new SimpleDateFormat("HH:mm:ss");
+
+            d1 = f.parse("17:00:00");
+            d2 = f.parse(SimpleDateFormat.format(currentTime));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        if (d1.compareTo(d2) >= 0) {
+            return true;
+        }
+        return false;
+    }
 
     //테이블에서 학생 선택
     public void selectTable() {
@@ -177,15 +171,15 @@ public class PageRes extends javax.swing.JFrame {
 
     private void acceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptActionPerformed
         //승인버튼, 사용자 예약 요청 0 -> 1 로 변경
-//        for (int i = 0; i < jTable1.getRowCount(); i++) {
-//            id = jTable1.getValueAt(i, 1).toString();
-//            classNum = (int) jTable1.getValueAt(i, 1);
-//        }
-//        System.out.println(classNum);
-        user.rnResUser(id);
-        //selectAdminister();
+        boolean time = timecheck();
 
-        JOptionPane.showMessageDialog(null, "예약을 승인했습니다.");
+        if (time) {
+            user.rnResUser(id);
+            JOptionPane.showMessageDialog(null, "예약을 승인했습니다.");
+        } else {
+            JOptionPane.showMessageDialog(null, "예약 승인 시간이 지났습니다.");
+        }
+        //selectAdminister();
         dispose();
     }//GEN-LAST:event_acceptActionPerformed
 
