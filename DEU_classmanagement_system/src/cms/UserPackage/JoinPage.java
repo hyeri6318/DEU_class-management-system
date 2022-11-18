@@ -27,6 +27,16 @@ public class JoinPage extends javax.swing.JFrame {
 
     String type = null;
 
+    private boolean IdTypeCheck() {  // 학생, 교수, 조교를 구분하여 아이디 값을 입력하는지 확인
+
+        char first = id_input.getText().charAt(0);
+
+        if (first == 'S' || first == 'P' || first == 'A') {
+            return true;
+        }
+        return false;
+    }
+
     private boolean UserTypeCheck() {    // 사용자를 구분하기 위함.
 
         char first = id_input.getText().charAt(0);
@@ -96,6 +106,7 @@ public class JoinPage extends javax.swing.JFrame {
         join = new javax.swing.JButton();
         exit = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -128,44 +139,51 @@ public class JoinPage extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("맑은 고딕", 1, 18)); // NOI18N
         jLabel7.setText("회원 가입");
 
+        jLabel8.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel8.setText("※ 사용자 구분을 위해 아이디 값을 학생은 S / 교수는 P / 조교는 A로 입력바랍니다.");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(134, Short.MAX_VALUE)
-                .addComponent(join)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(143, 143, 143))
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap(28, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(107, 107, 107)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6))
-                        .addGap(40, 40, 40)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(id_input)
-                            .addComponent(pw_input)
-                            .addComponent(name_input)
-                            .addComponent(tel_input)
-                            .addComponent(email_input)
-                            .addComponent(token_input, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(174, 174, 174)
-                        .addComponent(jLabel7)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel6))
+                                .addGap(40, 40, 40)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(id_input)
+                                    .addComponent(pw_input)
+                                    .addComponent(name_input)
+                                    .addComponent(tel_input)
+                                    .addComponent(email_input)
+                                    .addComponent(token_input, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(67, 67, 67)
+                                .addComponent(jLabel7)))
+                        .addGap(126, 126, 126))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(23, 23, 23))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(join)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(157, 157, 157))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(27, Short.MAX_VALUE)
+                .addGap(43, 43, 43)
                 .addComponent(jLabel7)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -191,11 +209,13 @@ public class JoinPage extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
                     .addComponent(token_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(jLabel8)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(join)
                     .addComponent(exit))
-                .addGap(23, 23, 23))
+                .addGap(35, 35, 35))
         );
 
         pack();
@@ -209,33 +229,38 @@ public class JoinPage extends javax.swing.JFrame {
 
         boolean usertype = UserTypeCheck();
         boolean tokencheck = TokenCheck();
+        boolean idcheck = IdTypeCheck();
 
         try {
             conn = db.getConnection();
             ps = conn.prepareStatement("insert into Client values(?,?,?,?,?,?,?,?)");
 
-            if (tokencheck) {
-                if (usertype) {
-                    ps.setString(1, id_input.getText());
-                    ps.setString(2, pw_input.getText());
-                    ps.setString(3, type);   // 사용자 유형
-                    ps.setInt(4, 0);    // 경고
-                    ps.setString(5, name_input.getText());
-                    ps.setString(6, tel_input.getText());
-                    ps.setString(7, email_input.getText());
-                    ps.setDate(8, null);    // 경고 날짜
+            if (idcheck) {
+                if (tokencheck) {
+                    if (usertype) {
+                        ps.setString(1, id_input.getText());
+                        ps.setString(2, pw_input.getText());
+                        ps.setString(3, type);   // 사용자 유형
+                        ps.setInt(4, 0);    // 경고
+                        ps.setString(5, name_input.getText());
+                        ps.setString(6, tel_input.getText());
+                        ps.setString(7, email_input.getText());
+                        ps.setDate(8, null);    // 경고 날짜
 
-                    ps.executeUpdate();
+                        ps.executeUpdate();
 
-                    JOptionPane.showMessageDialog(null, "회원가입이 완료되었습니다.");
+                        JOptionPane.showMessageDialog(null, "회원가입이 완료되었습니다.");
 
+                    } else {
+                        JOptionPane.showMessageDialog(null, "올바르지 않은 사용자 유형입니다.");
+                        id_input.setText(null);
+                    }
                 } else {
-                    JOptionPane.showMessageDialog(null, "올바르지 않은 사용자 유형입니다.");
-                    id_input.setText(null);
+                    JOptionPane.showMessageDialog(null, "올바르지 않은 토큰값 입니다.");
+                    token_input.setText(null);
                 }
             } else {
-                JOptionPane.showMessageDialog(null, "올바르지 않은 토큰값 입니다.");
-                token_input.setText(null);
+                JOptionPane.showMessageDialog(null, "ID첫 글자를 학생은 S / 교수는 P / 조교는 A로 입력해 주세요.");
             }
             conn.close();
         } catch (Exception ex) {
@@ -297,6 +322,7 @@ public class JoinPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JButton join;
     private javax.swing.JTextField name_input;
     private javax.swing.JTextField pw_input;
