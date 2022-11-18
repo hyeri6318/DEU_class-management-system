@@ -111,13 +111,14 @@ public class ConfirmRes implements Confirm {
             ps1 = conn.prepareStatement("update reservation set admin=0 where class_num='" + row[2] + "'");
             ps1.executeUpdate();
 
-            rs = st.executeQuery("select id from reservation where class_num='" + row[2] + "' order by r_endtime desc");
+            rs = st.executeQuery("select id from reservation where class_num='" + row[2] + "' and approve=1 order by r_endtime desc");
 
             while (rs.next()) {
                 id_list.add(rs.getString("id"));
             }
 
             String adminStudent = id_list.get(0).toString();
+            System.out.println(adminStudent);
 
             ps2 = conn.prepareStatement("update reservation set admin=1 where id='" + adminStudent + "'");
             ps2.executeUpdate();

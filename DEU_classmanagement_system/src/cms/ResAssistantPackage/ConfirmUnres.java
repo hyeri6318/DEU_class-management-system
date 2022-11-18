@@ -26,7 +26,7 @@ public class ConfirmUnres implements Confirm {
     PreparedStatement query = null;
     PreparedStatement ps1 = null;
     PreparedStatement ps2 = null;
-    PreparedStatement ps3=null;
+    PreparedStatement ps3 = null;
     Statement st = null;
     ResultSet rs = null;
 
@@ -103,25 +103,23 @@ public class ConfirmUnres implements Confirm {
 
             ArrayList id_list = new ArrayList<String>();
 
-            query = conn.prepareStatement("update reservation set approve=1 where id='" + row[1] + "'");
-            query.executeUpdate();
+            ps3 = conn.prepareStatement("delete reservation where id='" + row[1] + "'");
+            ps3.executeUpdate();
 
-            ps1 = conn.prepareStatement("update reservation set admin=0 where class_num='" + row[2] + "'");
+            ps1 = conn.prepareStatement("update reservation set admin=0 where class_num='" + row[2] + "' and approve=1");
             ps1.executeUpdate();
 
-            rs = st.executeQuery("select id from reservation where class_num='" + row[2] + "' order by r_endtime desc");
+            rs = st.executeQuery("select id from reservation where class_num='" + row[2] + "' and approve=1 order by r_endtime desc");
 
             while (rs.next()) {
                 id_list.add(rs.getString("id"));
             }
 
             String adminStudent = id_list.get(0).toString();
+            System.out.println(adminStudent);
 
             ps2 = conn.prepareStatement("update reservation set admin=1 where id='" + adminStudent + "'");
             ps2.executeUpdate();
-
-            ps3 = conn.prepareStatement("delete reservation where id='" + row[1] + "'");
-            ps3.executeUpdate();
 
             conn.close();
         } catch (Exception ex) {
