@@ -59,7 +59,6 @@ public class SearchAvailable implements SearchState {
           
             while(rs.next()){
                 String co = new String();
-                //co.setString(rs.getString("state"));
             }
 
         } catch (Exception ex) {

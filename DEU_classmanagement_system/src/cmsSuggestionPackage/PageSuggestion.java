@@ -1,5 +1,5 @@
 /*
-작성자 : 이혜리
+작성자 : 이혜리, 윤채민
 기능 : 불편사항을 제보하도록 구현함.
  */
 package cmsSuggestionPackage;

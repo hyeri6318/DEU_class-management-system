@@ -23,7 +23,6 @@ public class Schedule implements RegisterSchedule {
 
     @Override
     public void register() {   // 시간표 등록
-        //rs = ps2.executeQuery();
         System.out.println("스케쥴-시간표 등록합니다.");
         ConnectDB db = new ConnectDB();   // DB 객체 생성
         Connection conn = null;
@@ -42,8 +41,6 @@ public class Schedule implements RegisterSchedule {
             System.out.println("3");
             ps.setString(4, grade_name);
             System.out.println("4");
-//            ps2.setDate(5, time1);  //시작시간
-//            ps2.setDate(6, time2);  //끝시간
             ps.setInt(5, 1);
             System.out.println("5");
             ps.setInt(6, 1);

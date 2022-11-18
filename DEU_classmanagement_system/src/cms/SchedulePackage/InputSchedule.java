@@ -203,9 +203,6 @@ public class InputSchedule extends javax.swing.JFrame {
 
     private void OkBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OkBtnActionPerformed
         // 시간표 등록 버튼 구현
-        
-//        RegisterSchedule registerSchedule = new Schedule();  // 시간표 객체 생성
-//        registerSchedule.register();  // 시간표 입력 기능 구현
          
         grade_num = gradeNum.getText();
         class_name = class_name = Integer.parseInt(classNum.getSelectedItem().toString());

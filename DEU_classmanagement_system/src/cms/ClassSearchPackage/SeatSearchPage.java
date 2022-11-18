@@ -49,9 +49,9 @@ public class SeatSearchPage extends javax.swing.JFrame {
     int approve;
 
     String final_date;
-       
+
     // 날짜, 요일 추출을 위한 변수
-    int year ;
+    int year;
     int month;
     int date;
     int day;
@@ -110,7 +110,7 @@ public class SeatSearchPage extends javax.swing.JFrame {
             for (int i = 0; i < warn_list.size(); i++) {
                 if (warn_list.get(i).compareTo("3") >= 0) {   // 아이디가 있을 경우 예약 됨.
                     int w_check = Integer.valueOf(date_list.get(i).substring(8, 10));
-                    if (w_check+7 == date) {  // 경고 받은 날로부터 일주일이 지났는지 확인
+                    if (w_check + 7 == date) {  // 경고 받은 날로부터 일주일이 지났는지 확인
                         ps = conn.prepareStatement("update Client set warning=0, w_date=null where id='" + lg.getID() + "'");
                         ps.executeUpdate();
                         return false;
@@ -1465,7 +1465,7 @@ public class SeatSearchPage extends javax.swing.JFrame {
             int s_end = Integer.valueOf(endtime.substring(0, 2));
             int temp = s_end - s_start;
 
-                       boolean final_seat = r_seat();
+            boolean final_seat = r_seat();
 
             for (int j = s_start; j < s_end + 1; j++) { // 수업 시간표 및 세미나 겹치는지 확인
                 if (schedule[j] == 1) {

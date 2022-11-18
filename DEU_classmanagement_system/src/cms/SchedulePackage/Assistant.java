@@ -7,10 +7,7 @@ package cms.SchedulePackage;
 public class Assistant extends Admin {
     
     public Assistant(){  // 조교 클래스 생성자. 조교가 할 행동 정의
-//        searchState = new SearchAvailable();  // 실습실 좌석 조회 가능
-//        registerSchedule = new Schedule();   // 시간표 입력
         setRegisterSchedule(new Schedule());
-        //setSearchState(new SearchAvailable());
     }
     
     @Override

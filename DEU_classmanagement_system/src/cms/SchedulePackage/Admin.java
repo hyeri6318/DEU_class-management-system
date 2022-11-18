@@ -1,3 +1,6 @@
+/*
+작성자 : 정수연
+ */
 package cms.SchedulePackage;
 
 public class Admin {

@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+작성자 : 이혜리, 윤채민
+기능 : 예약 승인 요청 내역을 불러와 조교가 승인을 하도록 구현
  */
 package cms.ResAssistantPackage;
 
@@ -17,7 +16,7 @@ import javax.swing.table.TableModel;
 
 /**
  *
- * @author yooun
+ * @author 이혜리, 윤채민
  */
 public class ConfirmRes implements Confirm {
 

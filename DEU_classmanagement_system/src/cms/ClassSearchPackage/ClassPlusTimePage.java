@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+작성자 : 이혜리
+기능 : 실습실 예약 시간 연장
  */
 package cms.ClassSearchPackage;
 
@@ -16,7 +15,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author lhl63
+ * @author 이혜리
  */
 public class ClassPlusTimePage extends javax.swing.JFrame {
 
@@ -27,7 +26,7 @@ public class ClassPlusTimePage extends javax.swing.JFrame {
         initComponents();
     }
 
-    public void admin() {
+    public void admin() {   // 시간 연장시 관리자 권한을 변경하기 위함.
         ConnectDB db = new ConnectDB();
 
         Connection conn = null;

@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+작성자 : 윤채민
  */
 package cms.ResAssistantPackage;
 
@@ -14,7 +12,7 @@ import cmsSuggestionPackage.CheckSuggestionPage;
 
 /**
  *
- * @author yooun
+ * @author 윤채민
  */
 public class PageAss extends javax.swing.JFrame {
 

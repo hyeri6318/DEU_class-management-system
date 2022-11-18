@@ -23,14 +23,12 @@ public class Cancle implements CancleSubject {
     // 옵저버 등록
     @Override
     public void removeObserver(CancleObserver observer) {
-        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         observers.add(observer);
     }
 
     // 옵저버에 변경 값 알림
     @Override
     public void notifyObserver() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         for (int i = 0; i < observers.size(); i++) {
             CancleObserver observer = (CancleObserver) observers.get(i);
             observer.update(id);

@@ -30,7 +30,6 @@ public class CancledbUpdate implements CancleObserver {
 
     @Override
     public void update(String id) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         this.id = id;
 
         display();

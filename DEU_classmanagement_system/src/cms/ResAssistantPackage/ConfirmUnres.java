@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+작성자 : 이혜리, 윤채민
+기능 : 예약되어 있는 내역을 불러와 예약 취소를 구현
  */
 package cms.ResAssistantPackage;
 
@@ -17,7 +16,7 @@ import javax.swing.table.TableModel;
 
 /**
  *
- * @author yooun
+ * @author 이혜리, 윤채민
  */
 public class ConfirmUnres implements Confirm {
 
