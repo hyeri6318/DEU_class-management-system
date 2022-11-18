@@ -24,19 +24,27 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="150" max="32767" attributes="0"/>
+          </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
               <Component id="logoutBtn" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="inputSemina" max="32767" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <Component id="inputSchedule" alignment="0" max="32767" attributes="0"/>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="inputSemina" alignment="0" pref="136" max="32767" attributes="0"/>
+                      <Component id="inputSchedule" alignment="0" max="32767" attributes="0"/>
+                      <Component id="change_button1" alignment="0" max="32767" attributes="0"/>
+                      <Component id="delete_button1" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="134" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="137" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -45,13 +53,22 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-              <Component id="inputSchedule" min="-2" pref="31" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Component id="inputSemina" min="-2" pref="32" max="-2" attributes="0"/>
-              <EmptySpace pref="46" max="32767" attributes="0"/>
+              <EmptySpace pref="279" max="32767" attributes="0"/>
               <Component id="logoutBtn" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+                  <Component id="delete_button1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="change_button1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="inputSchedule" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="inputSemina" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="112" max="32767" attributes="0"/>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
@@ -65,14 +82,6 @@
         <Property name="text" type="java.lang.String" value="&#xad50;&#xc218; &#xba54;&#xc778;&#xd654;&#xba74;"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="inputSchedule">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#xc2e4;&#xc2b5;&#xc2e4; &#xc870;&#xd68c;"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="inputScheduleActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="logoutBtn">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xb85c;&#xadf8;&#xc544;&#xc6c3;"/>
@@ -81,12 +90,36 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logoutBtnActionPerformed"/>
       </Events>
     </Component>
+    <Component class="javax.swing.JButton" name="change_button1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xd68c;&#xc6d0; &#xc815;&#xbcf4; &#xc218;&#xc815;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="change_button1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="delete_button1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xd68c;&#xc6d0; &#xc815;&#xbcf4; &#xc0ad;&#xc81c;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="delete_button1ActionPerformed"/>
+      </Events>
+    </Component>
     <Component class="javax.swing.JButton" name="inputSemina">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xd2b9;&#xac15;/&#xc138;&#xbbf8;&#xb098; &#xc785;&#xb825;"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="inputSeminaActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="inputSchedule">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xc2e4;&#xc2b5;&#xc2e4; &#xc870;&#xd68c;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="inputScheduleActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

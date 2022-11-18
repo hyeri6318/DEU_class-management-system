@@ -7,6 +7,8 @@ package cms.ResAssistantPackage;
 
 import cms.SchedulePackage.InputSchedule;
 import cms.SchedulePackage.SeatStateView;
+import cms.UserPackage.ChangeInformPage;
+import cms.UserPackage.DeleteInformPage;
 import cms.UserPackage.LoginPage;
 import cmsSuggestionPackage.CheckSuggestionPage;
 
@@ -32,36 +34,17 @@ public class PageAss extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ResCancle = new javax.swing.JButton();
-        ResAccept = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         logoutBtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        searchclass_button = new javax.swing.JButton();
+        change_button = new javax.swing.JButton();
         searchschedule_button = new javax.swing.JButton();
+        searchclass_button = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        ResAccept = new javax.swing.JButton();
+        ResCancle = new javax.swing.JButton();
+        delete_button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        ResCancle.setText("승인 취소");
-        ResCancle.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ResCancleActionPerformed(evt);
-            }
-        });
-
-        ResAccept.setText("예약 승인");
-        ResAccept.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ResAcceptActionPerformed(evt);
-            }
-        });
-
-        jButton1.setText("제보 확인");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         logoutBtn.setText("로그아웃");
         logoutBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -73,10 +56,10 @@ public class PageAss extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("맑은 고딕", 1, 18)); // NOI18N
         jLabel2.setText("조교 메인화면");
 
-        searchclass_button.setText("실습실 조회 / 좌석 경고");
-        searchclass_button.addActionListener(new java.awt.event.ActionListener() {
+        change_button.setText("회원 정보 수정");
+        change_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchclass_buttonActionPerformed(evt);
+                change_buttonActionPerformed(evt);
             }
         });
 
@@ -84,6 +67,41 @@ public class PageAss extends javax.swing.JFrame {
         searchschedule_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchschedule_buttonActionPerformed(evt);
+            }
+        });
+
+        searchclass_button.setText("실습실 조회 / 좌석 경고");
+        searchclass_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchclass_buttonActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("제보 확인");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        ResAccept.setText("예약 승인");
+        ResAccept.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ResAcceptActionPerformed(evt);
+            }
+        });
+
+        ResCancle.setText("승인 취소");
+        ResCancle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ResCancleActionPerformed(evt);
+            }
+        });
+
+        delete_button.setText("회원 정보 삭제");
+        delete_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delete_buttonActionPerformed(evt);
             }
         });
 
@@ -100,39 +118,79 @@ public class PageAss extends javax.swing.JFrame {
                         .addGap(137, 137, 137)
                         .addComponent(jLabel2)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(111, 111, 111)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ResAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(122, 122, 122)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(ResAccept, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(ResCancle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(searchclass_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(searchschedule_button, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(searchschedule_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(change_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(delete_button, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addContainerGap(123, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(ResAccept)
-                .addGap(18, 18, 18)
-                .addComponent(ResCancle)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
-                .addComponent(searchclass_button)
-                .addGap(18, 18, 18)
-                .addComponent(searchschedule_button)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 357, Short.MAX_VALUE)
                 .addComponent(logoutBtn)
                 .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(89, 89, 89)
+                    .addComponent(change_button)
+                    .addGap(18, 18, 18)
+                    .addComponent(delete_button)
+                    .addGap(18, 18, 18)
+                    .addComponent(ResAccept)
+                    .addGap(18, 18, 18)
+                    .addComponent(ResCancle)
+                    .addGap(18, 18, 18)
+                    .addComponent(jButton1)
+                    .addGap(18, 18, 18)
+                    .addComponent(searchclass_button)
+                    .addGap(18, 18, 18)
+                    .addComponent(searchschedule_button)
+                    .addContainerGap(90, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBtnActionPerformed
+        // 로그아웃 기능 구현
+        LoginPage e = new LoginPage();
+        e.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_logoutBtnActionPerformed
+
+    private void change_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_change_buttonActionPerformed
+        // TODO add your handling code here:
+        ChangeInformPage change = new ChangeInformPage();
+        change.setVisible(true);
+    }//GEN-LAST:event_change_buttonActionPerformed
+
+    private void searchschedule_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchschedule_buttonActionPerformed
+        // TODO add your handling code here:
+        InputSchedule schedule = new InputSchedule();
+        schedule.setVisible(true);
+    }//GEN-LAST:event_searchschedule_buttonActionPerformed
+
+    private void searchclass_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchclass_buttonActionPerformed
+        // TODO add your handling code here:
+        SeatStateView seat = new SeatStateView();
+        seat.setVisible(true);
+    }//GEN-LAST:event_searchclass_buttonActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        CheckSuggestionPage check = new CheckSuggestionPage();
+        check.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void ResAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResAcceptActionPerformed
         //예약 승인 요청 사용자 처리 화면으로 전환
@@ -148,30 +206,11 @@ public class PageAss extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_ResCancleActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void delete_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delete_buttonActionPerformed
         // TODO add your handling code here:
-        CheckSuggestionPage check = new CheckSuggestionPage();
-        check.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBtnActionPerformed
-        // 로그아웃 기능 구현
-        LoginPage e = new LoginPage();
-        e.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_logoutBtnActionPerformed
-
-    private void searchclass_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchclass_buttonActionPerformed
-        // TODO add your handling code here:
-        SeatStateView seat = new SeatStateView();
-        seat.setVisible(true);
-    }//GEN-LAST:event_searchclass_buttonActionPerformed
-
-    private void searchschedule_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchschedule_buttonActionPerformed
-        // TODO add your handling code here:
-        InputSchedule schedule = new InputSchedule();
-        schedule.setVisible(true);
-    }//GEN-LAST:event_searchschedule_buttonActionPerformed
+        DeleteInformPage delete = new DeleteInformPage();
+        delete.setVisible(true);
+    }//GEN-LAST:event_delete_buttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -211,6 +250,8 @@ public class PageAss extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ResAccept;
     private javax.swing.JButton ResCancle;
+    private javax.swing.JButton change_button;
+    private javax.swing.JButton delete_button;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JButton logoutBtn;

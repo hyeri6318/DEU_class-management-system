@@ -243,6 +243,7 @@ public class JoinPage extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "올바르지 않은 입력입니다. 다시 입력해주세요.");
             id_input.setText(null);
         }
+        dispose();
     }//GEN-LAST:event_joinActionPerformed
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed

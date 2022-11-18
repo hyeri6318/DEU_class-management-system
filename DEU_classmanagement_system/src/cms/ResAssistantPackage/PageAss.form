@@ -36,18 +36,20 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ResAccept" min="-2" pref="163" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="ResCancle" max="32767" attributes="0"/>
-                      <Component id="jButton1" max="32767" attributes="0"/>
-                      <Component id="searchclass_button" max="32767" attributes="0"/>
-                      <Component id="searchschedule_button" min="-2" pref="163" max="-2" attributes="0"/>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="ResAccept" alignment="0" max="32767" attributes="0"/>
+                      <Component id="ResCancle" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jButton1" alignment="0" max="32767" attributes="0"/>
+                      <Component id="searchclass_button" alignment="0" max="32767" attributes="0"/>
+                      <Component id="searchschedule_button" alignment="0" max="32767" attributes="0"/>
+                      <Component id="change_button" alignment="0" max="32767" attributes="0"/>
+                      <Component id="delete_button" alignment="0" min="-2" pref="163" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace pref="123" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -56,48 +58,33 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="ResAccept" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="ResCancle" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="searchclass_button" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="searchschedule_button" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="41" max="32767" attributes="0"/>
+              <EmptySpace pref="357" max="32767" attributes="0"/>
               <Component id="logoutBtn" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
+                  <Component id="change_button" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="delete_button" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="ResAccept" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="ResCancle" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="searchclass_button" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="searchschedule_button" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="90" max="32767" attributes="0"/>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="ResCancle">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#xc2b9;&#xc778; &#xcde8;&#xc18c;"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ResCancleActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="ResAccept">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#xc608;&#xc57d; &#xc2b9;&#xc778;"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ResAcceptActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#xc81c;&#xbcf4; &#xd655;&#xc778;"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="logoutBtn">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xb85c;&#xadf8;&#xc544;&#xc6c3;"/>
@@ -114,12 +101,12 @@
         <Property name="text" type="java.lang.String" value="&#xc870;&#xad50; &#xba54;&#xc778;&#xd654;&#xba74;"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="searchclass_button">
+    <Component class="javax.swing.JButton" name="change_button">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&#xc2e4;&#xc2b5;&#xc2e4; &#xc870;&#xd68c; / &#xc88c;&#xc11d; &#xacbd;&#xace0;"/>
+        <Property name="text" type="java.lang.String" value="&#xd68c;&#xc6d0; &#xc815;&#xbcf4; &#xc218;&#xc815;"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchclass_buttonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="change_buttonActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="searchschedule_button">
@@ -128,6 +115,46 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchschedule_buttonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="searchclass_button">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xc2e4;&#xc2b5;&#xc2e4; &#xc870;&#xd68c; / &#xc88c;&#xc11d; &#xacbd;&#xace0;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchclass_buttonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xc81c;&#xbcf4; &#xd655;&#xc778;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="ResAccept">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xc608;&#xc57d; &#xc2b9;&#xc778;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ResAcceptActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="ResCancle">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xc2b9;&#xc778; &#xcde8;&#xc18c;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ResCancleActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="delete_button">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xd68c;&#xc6d0; &#xc815;&#xbcf4; &#xc0ad;&#xc81c;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="delete_buttonActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

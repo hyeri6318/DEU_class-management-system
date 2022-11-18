@@ -5,6 +5,8 @@
 package cms.ClassSearchPackage;
 
 import cms.ConnectDB.ConnectDB;
+import cms.UserPackage.ChangeInformPage;
+import cms.UserPackage.DeleteInformPage;
 import cms.UserPackage.LoginPage;
 import cmsSuggestionPackage.PageSuggestion;
 import java.sql.Connection;
@@ -40,6 +42,8 @@ public class StudentPage extends javax.swing.JFrame {
         plustime_button = new javax.swing.JButton();
         logoutBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        delete_button1 = new javax.swing.JButton();
+        change_button1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -81,35 +85,52 @@ public class StudentPage extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("맑은 고딕", 1, 18)); // NOI18N
         jLabel1.setText("학생 메인화면");
 
+        delete_button1.setText("회원 정보 삭제");
+        delete_button1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delete_button1ActionPerformed(evt);
+            }
+        });
+
+        change_button1.setText("회원 정보 수정");
+        change_button1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                change_button1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(logoutBtn))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addComponent(jLabel1)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap(307, Short.MAX_VALUE)
+                .addComponent(logoutBtn)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(129, 129, 129)
+                .addGap(126, 126, 126)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(searchClass_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(searchTime_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(plustime_button, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(130, Short.MAX_VALUE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(plustime_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(delete_button1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(change_button1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(13, 13, 13)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(38, 38, 38)
+                .addContainerGap(44, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
+                .addComponent(delete_button1)
+                .addGap(18, 18, 18)
+                .addComponent(change_button1)
+                .addGap(18, 18, 18)
                 .addComponent(searchClass_button)
                 .addGap(18, 18, 18)
                 .addComponent(searchTime_button)
@@ -117,7 +138,7 @@ public class StudentPage extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
                 .addComponent(plustime_button)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addGap(48, 48, 48)
                 .addComponent(logoutBtn)
                 .addContainerGap())
         );
@@ -164,6 +185,18 @@ public class StudentPage extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_logoutBtnActionPerformed
 
+    private void delete_button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delete_button1ActionPerformed
+        // TODO add your handling code here:
+        DeleteInformPage delete = new DeleteInformPage();
+        delete.setVisible(true);
+    }//GEN-LAST:event_delete_button1ActionPerformed
+
+    private void change_button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_change_button1ActionPerformed
+        // TODO add your handling code here:
+        ChangeInformPage change = new ChangeInformPage();
+        change.setVisible(true);
+    }//GEN-LAST:event_change_button1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -200,6 +233,8 @@ public class StudentPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton change_button1;
+    private javax.swing.JButton delete_button1;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton logoutBtn;
