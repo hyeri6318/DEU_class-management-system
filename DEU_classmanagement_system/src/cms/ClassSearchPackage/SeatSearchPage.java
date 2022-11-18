@@ -1538,8 +1538,8 @@ public class SeatSearchPage extends javax.swing.JFrame {
 
             for (int k = 0; k < id_list.size(); k++) {
 
-                if ((approve_list.get(k).equals("1"))) {
-                    if ((admin_list.get(k).equals("0"))) {
+                if ((approve_list.get(k).toString().equals("1"))) {
+                    if ((admin_list.get(k).toString().equals("0"))) {
                         r_textfield.setText("아이디 : " + id_list.get(k) + '\n'
                                 + "예약 좌석 번호 : " + seat_list.get(k) + '\n'
                                 + "예약 시작 시간 : " + starttime_list.get(k) + '\n'
