@@ -122,8 +122,6 @@ public class CreateTokenPage extends javax.swing.JFrame {
             conn = db.getConnection();
 
             if (currentDate.equals("3/1") || currentDate.equals("9/1")) {
-                JOptionPane.showMessageDialog(null, "토큰 생성 기간이 아닙니다.");
-            } else {
                 ps = conn.prepareStatement("insert into Token values(?,?,?)");
 
                 ps.setString(1, c.token);
@@ -133,6 +131,8 @@ public class CreateTokenPage extends javax.swing.JFrame {
                 ps.executeUpdate();
 
                 JOptionPane.showMessageDialog(null, c.token + " 토큰 생성이 완료되었습니다.");
+            } else {
+                JOptionPane.showMessageDialog(null, "토큰 생성 기간이 아닙니다.");
             }
         } catch (Exception ex) {
             ex.printStackTrace();
