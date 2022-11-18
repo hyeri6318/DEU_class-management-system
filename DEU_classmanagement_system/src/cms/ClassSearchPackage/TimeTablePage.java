@@ -144,12 +144,15 @@ public class TimeTablePage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
    
-    int check = 0; // 시간표 조회 횟수를 1회로 제한
+    int check911 = 0; // 시간표 조회 횟수를 1회로 제한
+    int check915=0;
+    int check916=0;
+    int check918=0;
     
     private void t911_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t911_buttonActionPerformed
         // TODO add your handling code here:
 
-        if (check != -1) {
+        if (check911 != -1) {
             DefaultTableModel model = (DefaultTableModel) time_table.getModel();
 
             ConnectDB db = new ConnectDB();
@@ -195,7 +198,7 @@ public class TimeTablePage extends javax.swing.JFrame {
 
                     model.addRow(new Object[]{arr.get(0), arr.get(1), arr.get(2), arr.get(3), arr.get(4), arr.get(5), arr.get(6)});
                 }
-                check = -1;
+                check911 = -1;
 
                 conn.close();
             } catch (Exception ex) {
@@ -208,7 +211,7 @@ public class TimeTablePage extends javax.swing.JFrame {
 
     private void t918_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t918_buttonActionPerformed
         // TODO add your handling code here:
-        if (check != -1) {
+        if (check918 != -1) {
             DefaultTableModel model = (DefaultTableModel) time_table.getModel();
 
             ConnectDB db = new ConnectDB();
@@ -254,7 +257,7 @@ public class TimeTablePage extends javax.swing.JFrame {
 
                     model.addRow(new Object[]{arr.get(0), arr.get(1), arr.get(2), arr.get(3), arr.get(4), arr.get(5), arr.get(6)});
                 }
-                check = -1;
+                check918 = -1;
 
                 conn.close();
             } catch (Exception ex) {
@@ -267,7 +270,7 @@ public class TimeTablePage extends javax.swing.JFrame {
 
     private void t916_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t916_buttonActionPerformed
         // TODO add your handling code here:
-        if (check != -1) {
+        if (check916 != -1) {
             DefaultTableModel model = (DefaultTableModel) time_table.getModel();
 
             ConnectDB db = new ConnectDB();
@@ -313,7 +316,7 @@ public class TimeTablePage extends javax.swing.JFrame {
 
                     model.addRow(new Object[]{arr.get(0), arr.get(1), arr.get(2), arr.get(3), arr.get(4), arr.get(5), arr.get(6)});
                 }
-                check = -1;
+                check916 = -1;
 
                 conn.close();
             } catch (Exception ex) {
@@ -326,7 +329,7 @@ public class TimeTablePage extends javax.swing.JFrame {
 
     private void t915_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t915_buttonActionPerformed
         // TODO add your handling code here:
-        if (check != -1) {
+        if (check915 != -1) {
             DefaultTableModel model = (DefaultTableModel) time_table.getModel();
 
             ConnectDB db = new ConnectDB();
@@ -372,7 +375,7 @@ public class TimeTablePage extends javax.swing.JFrame {
 
                     model.addRow(new Object[]{arr.get(0), arr.get(1), arr.get(2), arr.get(3), arr.get(4), arr.get(5), arr.get(6)});
                 }
-                check = -1;
+                check915 = -1;
 
                 conn.close();
             } catch (Exception ex) {

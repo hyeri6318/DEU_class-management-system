@@ -957,7 +957,7 @@ public class SeatStateView extends javax.swing.JFrame {
                         for (int j = 0; j < btn.length; j++) {
                             if (btn[j].equals(seat_list.get(i))) {
                                 System.out.println(btn[j]);
-                                b[j].setBackground(Color.gray);
+                                b[j].setBackground(Color.yellow);
                             }
                         }
                     }
@@ -1025,7 +1025,7 @@ public class SeatStateView extends javax.swing.JFrame {
                         for (int j = 0; j < btn.length; j++) {
                             if (btn[j].equals(seat_list.get(i))) {
                                 System.out.println(btn[j]);
-                                b[j].setBackground(Color.gray);
+                                b[j].setBackground(Color.red);
                             }
                         }
                     }
@@ -1093,7 +1093,7 @@ public class SeatStateView extends javax.swing.JFrame {
                         for (int j = 0; j < btn.length; j++) {
                             if (btn[j].equals(seat_list.get(i))) {
                                 System.out.println(btn[j]);
-                                b[j].setBackground(Color.gray);
+                                b[j].setBackground(Color.blue);
                             }
                         }
                     }
@@ -1161,7 +1161,7 @@ public class SeatStateView extends javax.swing.JFrame {
                         for (int j = 0; j < btn.length; j++) {
                             if (btn[j].equals(seat_list.get(i))) {
                                 System.out.println(btn[j]);
-                                b[j].setBackground(Color.gray);
+                                b[j].setBackground(Color.green);
                             }
                         }
                     }
