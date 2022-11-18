@@ -1546,8 +1546,8 @@ public class SeatSearchPage extends javax.swing.JFrame {
                                 + "예약 종료 시간 : " + endtime_list.get(k) + '\n'
                                 + "예약 날짜 : " + final_date + '\n'
                                 + "관리자 여부 : 관리자가 아닙니다." + '\n'
-                                + "강의실 규칙 : 규칙" + '\n'
-                                + "공지사항 및 주의사항 : 주의사항"
+                                + "강의실 규칙 : 실습실 내에서 물을 제외한 모든 음료 및 음식은 취식 불가입니다." + '\n'
+                                + "공지사항 및 주의사항 : 사용 후 컴퓨터 전원 및 멀티탭 전원을 반드시 내려 주십시오."
                         );
                     } else {
                         r_textfield.setText("아이디 : " + id_list.get(k) + '\n'
@@ -1556,8 +1556,8 @@ public class SeatSearchPage extends javax.swing.JFrame {
                                 + "예약 종료 시간 : " + endtime_list.get(k) + '\n'
                                 + "예약 날짜 : " + final_date + '\n'
                                 + "관리자 여부 : 관리자 입니다." + '\n'
-                                + "강의실 규칙 : 규칙" + '\n'
-                                + "공지사항 및 주의사항 : 주의사항"
+                                + "강의실 규칙 : 실습실 내에서 물을 제외한 모든 음료 및 음식은 취식 불가입니다." + '\n'
+                                + "공지사항 및 주의사항 : 사용 후 컴퓨터 전원 및 멀티탭 전원을 반드시 내려 주십시오."
                         );
                     }
 
@@ -1565,6 +1565,7 @@ public class SeatSearchPage extends javax.swing.JFrame {
             }
             conn.close();
         } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "예약되어있지 않은 학생입니다.");
             ex.printStackTrace();
         }
     }//GEN-LAST:event_search_butoonActionPerformed
