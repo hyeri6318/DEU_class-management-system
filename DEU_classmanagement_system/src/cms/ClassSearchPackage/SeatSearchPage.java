@@ -110,7 +110,7 @@ public class SeatSearchPage extends javax.swing.JFrame {
             for (int i = 0; i < warn_list.size(); i++) {
                 if (warn_list.get(i).compareTo("3") >= 0) {   // 아이디가 있을 경우 예약 됨.
                     int w_check = Integer.valueOf(date_list.get(i).substring(8, 10));
-                    if (w_check == date) {  // 경고 받은 날로부터 일주일이 지났는지 확인
+                    if (w_check+7 == date) {  // 경고 받은 날로부터 일주일이 지났는지 확인
                         ps = conn.prepareStatement("update Client set warning=0, w_date=null where id='" + lg.getID() + "'");
                         ps.executeUpdate();
                         return false;
@@ -126,7 +126,7 @@ public class SeatSearchPage extends javax.swing.JFrame {
         return true;
     }
 
-    public void r_seat() {   // 좌석 선택 여부 확인
+    public boolean r_seat() {   // 좌석 선택 여부 확인
         class_num = Integer.parseInt(class_combobox.getSelectedItem().toString());
         starttime = start_combobox.getSelectedItem().toString();
         endtime = end_combobox.getSelectedItem().toString();
@@ -135,6 +135,9 @@ public class SeatSearchPage extends javax.swing.JFrame {
         Connection conn = null;
         Statement st = null;
         ResultSet rs = null;
+        ResultSet rs1 = null;
+
+        String seat = null;
 
         try {
             conn = db.getConnection();
@@ -154,10 +157,12 @@ public class SeatSearchPage extends javax.swing.JFrame {
             int[] r_time = new int[25];
             int tmp = 0;
             int count = 0;
+            int count1 = 0;
 
             for (int i = 0; i < seat_list.size(); i++) {
                 int start = Integer.parseInt(starttime_list.get(i).toString().substring(0, 2));
                 int end = Integer.parseInt(endtime_list.get(i).toString().substring(0, 2));
+                seat = seat_list.get(i).toString();
 
                 tmp = end - start;
 
@@ -180,37 +185,28 @@ public class SeatSearchPage extends javax.swing.JFrame {
                 r21, r22, r23, r24, r25, r26, r27, r28, r29, r30,
                 r31, r32, r33, r34, r35, r36, r37, r38, r39, r40};
 
-            for (int j = s_start; j < s_end + 1; j++) {
-                if (r_time[j] == 1) {
-                    for (int i = 0; i < rbtn.length; i++) {
-                        if (r[i].isSelected()) {
-                            for (int k = 0; k < seat_list.size(); k++) {
-                                if (rbtn[i].equals(seat_list.get(k))) {
-                                    JOptionPane.showMessageDialog(null, "이미 예약된 좌석입니다.");
-                                }
+            for (int i = 0; i < rbtn.length; i++) {
+                if (r[i].isSelected()) {
+                    if (rbtn[i].equals(seat)) {   // 예약 된 좌석
+                        for (int j = s_start; j < s_end + 1; j++) {
+                            if (r_time[j] == 1) {   // 예약되어 있는 시간 (예약 불가능)
+                                return false;
+
+                            } else if (count == temp) {// 예약되어 있지 않은 시간 (예약 가능)
+                                return true;
                             }
-                            seat_num = Integer.parseInt(r[i].getText());
+                            count++;
                         }
-                    }
-                } else if (count == temp) {
-                    for (int i = 0; i < rbtn.length; i++) {
-                        if (r[i].isSelected()) {
-                            for (int k = 0; k < seat_list.size(); k++) {
-                                if (rbtn[i].equals(seat_list.get(k))) {
-                                    JOptionPane.showMessageDialog(null, "이미 예약된 좌석입니다.");
-                                }
-                            }
-                            seat_num = Integer.parseInt(r[i].getText());
-                        }
+                    } else { // 예약되지 않은 좌석
+                        return true;
                     }
                 }
-                count++;
             }
-
             conn.close();
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+        return true;
     }
 
     String k_date = null;
@@ -1469,19 +1465,28 @@ public class SeatSearchPage extends javax.swing.JFrame {
             int s_end = Integer.valueOf(endtime.substring(0, 2));
             int temp = s_end - s_start;
 
+                       boolean final_seat = r_seat();
+
             for (int j = s_start; j < s_end + 1; j++) { // 수업 시간표 및 세미나 겹치는지 확인
                 if (schedule[j] == 1) {
                     JOptionPane.showMessageDialog(null, "수업이 있는 강의실입니다.");
                     break;
                 } else if (count == temp) {
                     if (9 <= s_start && s_end < 17) { // 9시~17시 사이에 예약일 경우 (approve=1)
-                       r_seat();
-                        Reservation r = new Reservation();
-                        ResdbUpdate res = new ResdbUpdate(r);
-                        r.setMeasurements(lg.getName(), lg.getID(), class_num, seat_num, starttime, endtime, final_day, 0, 1);
+                        if (final_seat) {
+                            Reservation r = new Reservation();
+                            ResdbUpdate res = new ResdbUpdate(r);
+                            r.setMeasurements(lg.getName(), lg.getID(), class_num, seat_num, starttime, endtime, final_day, 0, 1);
+                        } else {
+                            JOptionPane.showMessageDialog(null, "예약되어 있는 좌석입니다.");
+                        }
                     } else { // 9시~17시 사이에 예약이 아닐 경우 (approve=0)
-                        r_seat();
-                         cut_class();
+                        if (final_seat) {
+                            r_seat();
+                            cut_class();
+                        } else {
+                            JOptionPane.showMessageDialog(null, "예약되어 있는 좌석입니다.");
+                        }
                     }
                 }
                 count++;
