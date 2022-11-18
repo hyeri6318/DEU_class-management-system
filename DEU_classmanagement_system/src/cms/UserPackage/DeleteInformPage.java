@@ -51,7 +51,7 @@ public class DeleteInformPage extends javax.swing.JFrame {
             }
         });
 
-        exit.setText("종료");
+        exit.setText("이전");
         exit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitActionPerformed(evt);

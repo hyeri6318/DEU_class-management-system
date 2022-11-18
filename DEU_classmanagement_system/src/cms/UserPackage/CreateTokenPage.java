@@ -59,6 +59,7 @@ public class CreateTokenPage extends javax.swing.JFrame {
 
         createToken_button = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        exit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,6 +73,8 @@ public class CreateTokenPage extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("맑은 고딕", 1, 18)); // NOI18N
         jLabel5.setText("토큰 생성");
 
+        exit.setText("이전");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -82,6 +85,10 @@ public class CreateTokenPage extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(createToken_button))
                 .addContainerGap(161, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(exit)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -90,7 +97,9 @@ public class CreateTokenPage extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addGap(80, 80, 80)
                 .addComponent(createToken_button)
-                .addContainerGap(134, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
+                .addComponent(exit)
+                .addContainerGap())
         );
 
         pack();
@@ -168,6 +177,7 @@ public class CreateTokenPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton createToken_button;
+    private javax.swing.JButton exit;
     private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }
