@@ -27,7 +27,12 @@ public class ProfessorMain extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("맑은 고딕", 1, 18)); // NOI18N
         jLabel1.setText("교수 메인화면");
 
-        inputSchedule.setText("시간표 입력");
+        inputSchedule.setText("실습실 조회");
+        inputSchedule.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputScheduleActionPerformed(evt);
+            }
+        });
 
         logoutBtn.setText("로그아웃");
         logoutBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -90,6 +95,12 @@ public class ProfessorMain extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_logoutBtnActionPerformed
 
+    private void inputScheduleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputScheduleActionPerformed
+        // TODO add your handling code here:
+        SeatStateView seat = new SeatStateView();
+        seat.setVisible(true);
+    }//GEN-LAST:event_inputScheduleActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -112,6 +123,8 @@ public class ProfessorMain extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(ProfessorMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 

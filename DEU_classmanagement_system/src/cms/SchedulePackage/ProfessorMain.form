@@ -67,8 +67,11 @@
     </Component>
     <Component class="javax.swing.JButton" name="inputSchedule">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&#xc2dc;&#xac04;&#xd45c; &#xc785;&#xb825;"/>
+        <Property name="text" type="java.lang.String" value="&#xc2e4;&#xc2b5;&#xc2e4; &#xc870;&#xd68c;"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="inputScheduleActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="logoutBtn">
       <Properties>
