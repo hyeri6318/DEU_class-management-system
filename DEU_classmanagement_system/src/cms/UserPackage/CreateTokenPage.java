@@ -58,6 +58,7 @@ public class CreateTokenPage extends javax.swing.JFrame {
     private void initComponents() {
 
         createToken_button = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,21 +69,28 @@ public class CreateTokenPage extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setFont(new java.awt.Font("맑은 고딕", 1, 18)); // NOI18N
+        jLabel5.setText("토큰 생성");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(154, 154, 154)
-                .addComponent(createToken_button)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addComponent(createToken_button))
                 .addContainerGap(161, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(127, 127, 127)
+                .addGap(38, 38, 38)
+                .addComponent(jLabel5)
+                .addGap(80, 80, 80)
                 .addComponent(createToken_button)
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addContainerGap(134, Short.MAX_VALUE))
         );
 
         pack();
@@ -160,5 +168,6 @@ public class CreateTokenPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton createToken_button;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }
