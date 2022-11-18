@@ -78,9 +78,9 @@ public class InputSemina extends javax.swing.JFrame {
 
         jLabel9.setText("날짜");
 
-        classNum.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "911호", "915호", "916호", "918호" }));
+        classNum.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "911", "915", "916", "918" }));
 
-        weekDay.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "월요일", "화요일", "수요일", "목요일", "금요일" }));
+        weekDay.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "월", "화", "수", "목", "금", "토", "일" }));
 
         UndoBtn.setText("이전");
         UndoBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -277,7 +277,7 @@ public class InputSemina extends javax.swing.JFrame {
         // 특강 및 세미나 등록 버튼 구현
 
         grade_num = gradeNum.getText();  //과목번호
-        class_name = classNum.getSelectedItem().hashCode(); //호실  
+        class_name = Integer.parseInt(classNum.getSelectedItem().toString()); //호실  
         pro_name = proName.getText();   //교수명
         grade_name = gradeName.getText();  //과목명
         week_day = weekDay.getSelectedItem().toString();  //요일

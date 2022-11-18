@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+
 /**
  *
  * @author 이혜리
@@ -141,6 +142,7 @@ public class DeleteInformPage extends javax.swing.JFrame {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+        dispose();
     }//GEN-LAST:event_deleteInform_buttonActionPerformed
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed

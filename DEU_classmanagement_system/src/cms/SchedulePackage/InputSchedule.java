@@ -234,7 +234,7 @@ public class InputSchedule extends javax.swing.JFrame {
 //        registerSchedule.register();  // 시간표 입력 기능 구현
          
         grade_num = gradeNum.getText();
-        class_name = classNum.getSelectedItem().hashCode();
+        class_name = class_name = Integer.parseInt(classNum.getSelectedItem().toString());
         pro_name = proName.getText();
         grade_name = gradeName.getText();
         week_day = weekDay.getSelectedItem().toString();
