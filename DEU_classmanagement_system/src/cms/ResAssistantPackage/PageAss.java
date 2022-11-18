@@ -5,6 +5,8 @@
  */
 package cms.ResAssistantPackage;
 
+import cms.SchedulePackage.InputSchedule;
+import cms.SchedulePackage.SeatStateView;
 import cms.UserPackage.LoginPage;
 import cmsSuggestionPackage.CheckSuggestionPage;
 
@@ -32,9 +34,11 @@ public class PageAss extends javax.swing.JFrame {
 
         ResCancle = new javax.swing.JButton();
         ResAccept = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         logoutBtn = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        searchclass_button = new javax.swing.JButton();
+        searchschedule_button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,8 +56,6 @@ public class PageAss extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("예약 관리 화면 조교 페이지");
-
         jButton1.setText("제보 확인");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,39 +70,63 @@ public class PageAss extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("맑은 고딕", 1, 18)); // NOI18N
+        jLabel2.setText("조교 메인화면");
+
+        searchclass_button.setText("실습실 조회 / 좌석 경고");
+        searchclass_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchclass_buttonActionPerformed(evt);
+            }
+        });
+
+        searchschedule_button.setText("시간표 입력");
+        searchschedule_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchschedule_buttonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(63, 63, 63)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(315, Short.MAX_VALUE)
+                        .addComponent(logoutBtn))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(137, 137, 137)
+                        .addComponent(jLabel2)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(111, 111, 111)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ResAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(ResCancle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(searchclass_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(searchschedule_button, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
                 .addComponent(ResAccept)
                 .addGap(18, 18, 18)
                 .addComponent(ResCancle)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(54, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(108, 108, 108))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(logoutBtn)
-                        .addContainerGap())))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(100, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(94, 94, 94)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ResAccept)
-                    .addComponent(ResCancle)
-                    .addComponent(jButton1))
-                .addGap(35, 35, 35)
+                .addGap(18, 18, 18)
+                .addComponent(searchclass_button)
+                .addGap(18, 18, 18)
+                .addComponent(searchschedule_button)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addComponent(logoutBtn)
                 .addContainerGap())
         );
@@ -134,6 +160,18 @@ public class PageAss extends javax.swing.JFrame {
         e.setVisible(true);
         dispose();
     }//GEN-LAST:event_logoutBtnActionPerformed
+
+    private void searchclass_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchclass_buttonActionPerformed
+        // TODO add your handling code here:
+        SeatStateView seat = new SeatStateView();
+        seat.setVisible(true);
+    }//GEN-LAST:event_searchclass_buttonActionPerformed
+
+    private void searchschedule_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchschedule_buttonActionPerformed
+        // TODO add your handling code here:
+        InputSchedule schedule = new InputSchedule();
+        schedule.setVisible(true);
+    }//GEN-LAST:event_searchschedule_buttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,7 +212,9 @@ public class PageAss extends javax.swing.JFrame {
     private javax.swing.JButton ResAccept;
     private javax.swing.JButton ResCancle;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JButton logoutBtn;
+    private javax.swing.JButton searchclass_button;
+    private javax.swing.JButton searchschedule_button;
     // End of variables declaration//GEN-END:variables
 }

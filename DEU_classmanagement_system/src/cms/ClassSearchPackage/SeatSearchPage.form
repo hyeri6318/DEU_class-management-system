@@ -27,11 +27,6 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="522" max="32767" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="708" max="32767" attributes="0"/>
-          </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -124,18 +119,6 @@
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="btn7" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
-                                      <Component id="r7" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="r8" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="btn8" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -146,6 +129,23 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="r16" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="btn16" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="btn7" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                              <Component id="r7" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="r8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btn8" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Component id="reservation_button" alignment="1" min="-2" pref="82" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -276,7 +276,12 @@
                   </Group>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="exit" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jScrollPane1" alignment="0" min="-2" pref="429" max="-2" attributes="0"/>
@@ -285,30 +290,29 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="cancle_button" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="reservation_button" min="-2" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Component id="warn_button" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="warn_textfield" min="-2" pref="95" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="exit" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <EmptySpace pref="75" max="32767" attributes="0"/>
                   </Group>
               </Group>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="523" max="-2" attributes="0"/>
+              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="36" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="32" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="end_combobox" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -316,10 +320,10 @@
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="class_combobox" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="reservation_button" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="reservation_button" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="s916_button" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
@@ -393,34 +397,16 @@
                           <Component id="btn23" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
                           <Component id="btn24" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
                       </Group>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="search_butoon" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="cancle_button" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="261" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="warn_button" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="warn_textfield" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="r25" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="r26" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="r27" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="r28" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="r29" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="r30" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="r31" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="r32" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="r25" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r26" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r27" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r28" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r29" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r30" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r31" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="r32" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -433,7 +419,24 @@
                           <Component id="btn31" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
                           <Component id="btn32" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
                       </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="search_butoon" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cancle_button" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="261" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="warn_button" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="warn_textfield" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="r33" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="r34" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -467,11 +470,6 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#xc88c;&#xc11d; &#xbc30;&#xce58;&#xb3c4;"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JButton" name="s911_button">
       <Properties>
         <Property name="text" type="java.lang.String" value="911 &#xc88c;&#xc11d;&#xc870;&#xd68c;"/>
@@ -1324,6 +1322,14 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="&#xb9d1;&#xc740; &#xace0;&#xb515;" size="18" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#xc2e4;&#xc2b5;&#xc2e4; &#xc88c;&#xc11d; &#xc870;&#xd68c; &#xbc0f; &#xc608;&#xc57d;"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
