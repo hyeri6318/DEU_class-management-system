@@ -27,6 +27,56 @@ public class ClassPlusTimePage extends javax.swing.JFrame {
         initComponents();
     }
 
+    public void admin() {
+        ConnectDB db = new ConnectDB();
+
+        Connection conn = null;
+        PreparedStatement query = null;
+        PreparedStatement ps1 = null;
+        Statement st = null;
+        ResultSet rs1 = null;
+        ResultSet rs2 = null;
+
+        LoginPage lg = new LoginPage();
+
+        try {
+            conn = db.getConnection();
+            st = conn.createStatement();
+
+            rs1 = st.executeQuery("select * from reservation where id='" + lg.getID() + "'");
+
+            ArrayList class_list = new ArrayList<String>();
+            ArrayList id_list = new ArrayList<String>();
+
+            while (rs1.next()) {
+                class_list.add(rs1.getString("class_num"));
+            }
+
+            for (int i = 0; i < class_list.size(); i++) {
+                query = conn.prepareStatement("update reservation set admin=0 where class_num='" + class_list.get(i) + "'");
+                query.executeUpdate();
+                
+                rs2 = st.executeQuery("select id from reservation where class_num='" + class_list.get(i) + "' and approve=1 order by r_endtime desc");
+            }
+
+            while (rs2.next()) {
+                id_list.add(rs2.getString("id"));
+            }
+
+            String adminStudent = id_list.get(0).toString();
+            System.out.println(adminStudent);
+
+            ps1 = conn.prepareStatement("update reservation set admin=1 where id='" + adminStudent + "'");
+            ps1.executeUpdate();
+
+            conn.close();
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -120,10 +170,10 @@ public class ClassPlusTimePage extends javax.swing.JFrame {
         int classNum = 0;
         int seatNum = 0;
         int rtime = 0;
-        int approve=0;
-   
+        int approve = 0;
+
         String final_time = time_combobox.getSelectedItem().toString();
-        int select_time = Integer.parseInt(final_time.substring(0,2));
+        int select_time = Integer.parseInt(final_time.substring(0, 2));
 
         try {
 
@@ -145,11 +195,13 @@ public class ClassPlusTimePage extends javax.swing.JFrame {
             }
 
             for (int i = 0; i < time_list.size(); i++) {
+               
                 classNum = Integer.parseInt(class_list.get(i).toString());
                 rtime = Integer.parseInt(time_list.get(i).toString().substring(0, 2));
                 seatNum = Integer.parseInt(seat_list.get(i).toString());
-                if(Integer.parseInt(approve_list.get(i).toString())==0){
-                    JOptionPane.showMessageDialog(null, "예약x");
+               
+                if (Integer.parseInt(approve_list.get(i).toString()) == 0) {
+                    JOptionPane.showMessageDialog(null, "예약되어 있지 않은 학생입니다.");
                 }
             }
 
@@ -164,12 +216,11 @@ public class ClassPlusTimePage extends javax.swing.JFrame {
                 }
 
                 if (id_list.isEmpty()) {
-                    System.out.println("B");
-                    query = conn.prepareStatement("UPDATE RESERVATION SET R_ENDTIME = '" + final_time +"' where id = '" + lg.getID() + "'");
+                    query = conn.prepareStatement("UPDATE RESERVATION SET R_ENDTIME = '" + final_time + "' where id = '" + lg.getID() + "'");
                     query.executeUpdate();
+                    admin();
                     JOptionPane.showMessageDialog(null, "시간 연장이 되었습니다.");
                 } else {
-                    System.out.println("A");
                     JOptionPane.showMessageDialog(null, "예약자가 있어 시간 연장이 불가능합니다.");
                 }
             }
