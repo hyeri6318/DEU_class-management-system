@@ -196,14 +196,12 @@ public class PageAss extends javax.swing.JFrame {
         //예약 승인 요청 사용자 처리 화면으로 전환
         PageRes pageRes = new PageRes();
         pageRes.setVisible(true);
-        dispose();
     }//GEN-LAST:event_ResAcceptActionPerformed
 
     private void ResCancleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResCancleActionPerformed
         //예약 승인된 사용자 취소 처리 화면으로 전환
         PageUnres pageUnres = new PageUnres();
         pageUnres.setVisible(true);
-        dispose();
     }//GEN-LAST:event_ResCancleActionPerformed
 
     private void delete_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delete_buttonActionPerformed
