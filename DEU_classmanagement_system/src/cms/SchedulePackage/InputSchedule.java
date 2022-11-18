@@ -27,9 +27,7 @@ public class InputSchedule extends javax.swing.JFrame {
     String week_day;   //요일
 
     String start_hour;    // 시작시간 - 시
-    String start_min;     // 시작시간 - 분
     String end_hour;      // 종료시간 - 시
-    String end_min;       // 종료시간 - 분
 
     public InputSchedule() {
         Schedule schedule = new Schedule();
@@ -53,14 +51,10 @@ public class InputSchedule extends javax.swing.JFrame {
         classNum = new javax.swing.JComboBox<>();
         UndoBtn = new javax.swing.JButton();
         OkBtn = new javax.swing.JButton();
-        s_hour = new javax.swing.JComboBox<>();
-        s_min = new javax.swing.JComboBox<>();
-        e_min = new javax.swing.JComboBox<>();
-        e_hour = new javax.swing.JComboBox<>();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        starttime = new javax.swing.JComboBox<>();
+        endtime = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("시간표 입력");
@@ -106,21 +100,13 @@ public class InputSchedule extends javax.swing.JFrame {
             }
         });
 
-        s_hour.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23" }));
-
-        s_min.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "30" }));
-
-        e_min.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "30" }));
-
-        e_hour.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23" }));
-
-        jLabel13.setText(":");
-
-        jLabel14.setText(":");
-
         jLabel9.setText("시작시간");
 
         jLabel10.setText("끝시간");
+
+        starttime.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "09:00:00", "10:00:00", "11:00:00", "12:00:00", "13:00:00", "14:00:00", "15:00:00", "16:00:00", "17:00:00", "18:00:00", "19:00:00", "20:00:00", "21:00:00", "22:00:00", "23:00:00", "24:00:00", "01:00:00", "02:00:00", "03:00:00", "04:00:00", "05:00:00", "06:00:00", "07:00:00", "08:00:00" }));
+
+        endtime.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "09:00:00", "10:00:00", "11:00:00", "12:00:00", "13:00:00", "14:00:00", "15:00:00", "16:00:00", "17:00:00", "18:00:00", "19:00:00", "20:00:00", "21:00:00", "22:00:00", "23:00:00", "24:00:00", "01:00:00", "02:00:00", "03:00:00", "04:00:00", "05:00:00", "06:00:00", "07:00:00", "08:00:00" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -151,20 +137,12 @@ public class InputSchedule extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(29, 29, 29)
                         .addComponent(jLabel9)
-                        .addGap(18, 18, 18)
-                        .addComponent(s_hour, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(8, 8, 8)
-                        .addComponent(jLabel13)
-                        .addGap(7, 7, 7)
-                        .addComponent(s_min, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(starttime, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(13, 13, 13)
                         .addComponent(jLabel10)
-                        .addGap(18, 18, 18)
-                        .addComponent(e_hour, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel14)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(e_min, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(endtime, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -202,13 +180,9 @@ public class InputSchedule extends javax.swing.JFrame {
                     .addComponent(weekDay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(classNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9)
-                    .addComponent(s_hour, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(s_min, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13)
                     .addComponent(jLabel10)
-                    .addComponent(e_min, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(e_hour, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14))
+                    .addComponent(starttime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(endtime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(59, 59, 59)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(UndoBtn)
@@ -240,14 +214,12 @@ public class InputSchedule extends javax.swing.JFrame {
         week_day = weekDay.getSelectedItem().toString();
         
         //시, 분
-        start_hour = s_hour.getSelectedItem().toString();  // 시작 - 시
-        start_min = s_min.getSelectedItem().toString();   // 시작 - 분
-        end_hour = e_hour.getSelectedItem().toString();   // 종료 - 시
-        end_min = e_min.getSelectedItem().toString();    // 종료 - 분
+        start_hour = starttime.getSelectedItem().toString();  // 시작 - 시
+        end_hour = endtime.getSelectedItem().toString();   // 종료 - 시
         
         //시간 DB 입력
-        String start_time = start_hour + ":" + start_min;
-        String end_time = end_hour + ":" + end_min;
+        String start_time = start_hour;
+        String end_time = end_hour;
 
         ConnectDB db = new ConnectDB();   // DB 객체 생성
         Connection conn = null;
@@ -346,14 +318,11 @@ public class InputSchedule extends javax.swing.JFrame {
     private javax.swing.JButton OkBtn;
     private javax.swing.JButton UndoBtn;
     private javax.swing.JComboBox<String> classNum;
-    private javax.swing.JComboBox<String> e_hour;
-    private javax.swing.JComboBox<String> e_min;
+    private javax.swing.JComboBox<String> endtime;
     private javax.swing.JTextField gradeName;
     private javax.swing.JTextField gradeNum;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -361,8 +330,7 @@ public class InputSchedule extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField proName;
-    private javax.swing.JComboBox<String> s_hour;
-    private javax.swing.JComboBox<String> s_min;
+    private javax.swing.JComboBox<String> starttime;
     private javax.swing.JComboBox<String> weekDay;
     // End of variables declaration//GEN-END:variables
 }

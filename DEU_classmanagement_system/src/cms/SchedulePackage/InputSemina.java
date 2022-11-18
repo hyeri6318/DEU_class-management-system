@@ -26,9 +26,7 @@ public class InputSemina extends javax.swing.JFrame {
     String day1;   //일
     //시, 분
     String start_hour;    // 시작시간 - 시
-    String start_min;     // 시작시간 - 분
     String end_hour;      // 종료시간 - 시
-    String end_min;       // 종료시간 - 분
 
     public InputSemina() {
         initComponents();
@@ -60,12 +58,8 @@ public class InputSemina extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        s_hour = new javax.swing.JComboBox<>();
-        s_min = new javax.swing.JComboBox<>();
-        e_min = new javax.swing.JComboBox<>();
-        e_hour = new javax.swing.JComboBox<>();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        endtime = new javax.swing.JComboBox<>();
+        starttime = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -124,17 +118,9 @@ public class InputSemina extends javax.swing.JFrame {
 
         jLabel6.setText("시작시간");
 
-        s_hour.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23" }));
+        endtime.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "09:00:00", "10:00:00", "11:00:00", "12:00:00", "13:00:00", "14:00:00", "15:00:00", "16:00:00", "17:00:00", "18:00:00", "19:00:00", "20:00:00", "21:00:00", "22:00:00", "23:00:00", "24:00:00", "01:00:00", "02:00:00", "03:00:00", "04:00:00", "05:00:00", "06:00:00", "07:00:00", "08:00:00" }));
 
-        s_min.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "30" }));
-
-        e_min.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "30" }));
-
-        e_hour.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23" }));
-
-        jLabel13.setText(":");
-
-        jLabel14.setText(":");
+        starttime.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "09:00:00", "10:00:00", "11:00:00", "12:00:00", "13:00:00", "14:00:00", "15:00:00", "16:00:00", "17:00:00", "18:00:00", "19:00:00", "20:00:00", "21:00:00", "22:00:00", "23:00:00", "24:00:00", "01:00:00", "02:00:00", "03:00:00", "04:00:00", "05:00:00", "06:00:00", "07:00:00", "08:00:00" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -149,12 +135,8 @@ public class InputSemina extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(jLabel6)
-                        .addGap(18, 18, 18)
-                        .addComponent(s_hour, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(8, 8, 8)
-                        .addComponent(jLabel13)
-                        .addGap(7, 7, 7)
-                        .addComponent(s_min, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(starttime, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(jLabel3)
@@ -209,13 +191,9 @@ public class InputSemina extends javax.swing.JFrame {
                                 .addComponent(OkBtn))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jLabel7)
-                                .addGap(18, 18, 18)
-                                .addComponent(e_hour, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel14)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(e_min, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(183, 183, 183)))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(endtime, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(166, 166, 166)))))
                 .addGap(39, 39, 39))
         );
         layout.setVerticalGroup(
@@ -248,12 +226,8 @@ public class InputSemina extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(jLabel7)
-                    .addComponent(s_hour, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(s_min, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(e_min, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(e_hour, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13)
-                    .addComponent(jLabel14))
+                    .addComponent(endtime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(starttime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(UndoBtn)
@@ -281,25 +255,23 @@ public class InputSemina extends javax.swing.JFrame {
         pro_name = proName.getText();   //교수명
         grade_name = gradeName.getText();  //과목명
         week_day = weekDay.getSelectedItem().toString();  //요일
-        
+
         //날짜(date)
         year1 = year.getSelectedItem().toString();  //년
         month1 = month.getSelectedItem().toString();   //월
         day1 = day.getSelectedItem().toString();   //일
-        
+
         //시, 분
-        start_hour = s_hour.getSelectedItem().toString();  // 시작 - 시
-        start_min = s_min.getSelectedItem().toString();   // 시작 - 분
-        end_hour = e_hour.getSelectedItem().toString();   // 종료 - 시
-        end_min = e_min.getSelectedItem().toString();    // 종료 - 분
+        start_hour = starttime.getSelectedItem().toString();  // 시작 - 시
+        end_hour = endtime.getSelectedItem().toString();   // 종료 - 시
 
         //날짜 DB 입력
         String date = year1 + "-" + month1 + "-" + day1;
         Date d = Date.valueOf(date);  //date로 타입 변환
 
         //시간 DB 입력
-        String start_time = start_hour + ":" + start_min;
-        String end_time = end_hour + ":" + end_min;
+        String start_time = start_hour;
+        String end_time = end_hour;
 
         ConnectDB db = new ConnectDB();   // DB 객체 생성
         Connection conn = null;
@@ -391,16 +363,13 @@ public class InputSemina extends javax.swing.JFrame {
     private javax.swing.JButton UndoBtn;
     private javax.swing.JComboBox<String> classNum;
     private javax.swing.JComboBox<String> day;
-    private javax.swing.JComboBox<String> e_hour;
-    private javax.swing.JComboBox<String> e_min;
+    private javax.swing.JComboBox<String> endtime;
     private javax.swing.JTextField gradeName;
     private javax.swing.JTextField gradeNum;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -411,8 +380,7 @@ public class InputSemina extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JComboBox<String> month;
     private javax.swing.JTextField proName;
-    private javax.swing.JComboBox<String> s_hour;
-    private javax.swing.JComboBox<String> s_min;
+    private javax.swing.JComboBox<String> starttime;
     private javax.swing.JComboBox<String> weekDay;
     private javax.swing.JComboBox<String> year;
     // End of variables declaration//GEN-END:variables
