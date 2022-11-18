@@ -82,6 +82,34 @@ public class JoinPage extends javax.swing.JFrame {
         return false;
     }
 
+    public boolean overlapID() { // 아이디 중복 확인
+        ConnectDB db = new ConnectDB();
+        Connection conn = null;
+        Statement st = null;
+        ResultSet rs = null;
+
+        try {
+            conn = db.getConnection();
+            st = conn.createStatement();
+            rs = st.executeQuery("select * from Client");
+
+            ArrayList id_list = new ArrayList<String>();
+
+            while (rs.next()) {
+                id_list.add(rs.getString("id"));
+            }
+
+            for (int i = 0; i < id_list.size(); i++) {
+                if (id_input.getText().equals(id_list.get(i))) {
+                    return false;
+                }
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return true;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -230,37 +258,44 @@ public class JoinPage extends javax.swing.JFrame {
         boolean usertype = UserTypeCheck();
         boolean tokencheck = TokenCheck();
         boolean idcheck = IdTypeCheck();
+        boolean overlap = overlapID();
 
         try {
             conn = db.getConnection();
             ps = conn.prepareStatement("insert into Client values(?,?,?,?,?,?,?,?)");
 
-            if (idcheck) {
-                if (tokencheck) {
-                    if (usertype) {
-                        ps.setString(1, id_input.getText());
-                        ps.setString(2, pw_input.getText());
-                        ps.setString(3, type);   // 사용자 유형
-                        ps.setInt(4, 0);    // 경고
-                        ps.setString(5, name_input.getText());
-                        ps.setString(6, tel_input.getText());
-                        ps.setString(7, email_input.getText());
-                        ps.setDate(8, null);    // 경고 날짜
+            if (overlap) {
+                if (idcheck) {
+                    if (tokencheck) {
+                        if (usertype) {
+                            ps.setString(1, id_input.getText());
+                            ps.setString(2, pw_input.getText());
+                            ps.setString(3, type);   // 사용자 유형
+                            ps.setInt(4, 0);    // 경고
+                            ps.setString(5, name_input.getText());
+                            ps.setString(6, tel_input.getText());
+                            ps.setString(7, email_input.getText());
+                            ps.setDate(8, null);    // 경고 날짜
 
-                        ps.executeUpdate();
+                            ps.executeUpdate();
 
-                        JOptionPane.showMessageDialog(null, "회원가입이 완료되었습니다.");
+                            JOptionPane.showMessageDialog(null, "회원가입이 완료되었습니다.");
 
+                        } else {
+                            JOptionPane.showMessageDialog(null, "올바르지 않은 사용자 유형입니다.");
+                            id_input.setText(null);
+                        }
                     } else {
-                        JOptionPane.showMessageDialog(null, "올바르지 않은 사용자 유형입니다.");
-                        id_input.setText(null);
+                        JOptionPane.showMessageDialog(null, "올바르지 않은 토큰값 입니다.");
+                        token_input.setText(null);
                     }
                 } else {
-                    JOptionPane.showMessageDialog(null, "올바르지 않은 토큰값 입니다.");
+                    JOptionPane.showMessageDialog(null, "ID첫 글자를 학생은 S / 교수는 P / 조교는 A로 입력해 주세요.");
                     token_input.setText(null);
                 }
             } else {
-                JOptionPane.showMessageDialog(null, "ID첫 글자를 학생은 S / 교수는 P / 조교는 A로 입력해 주세요.");
+                JOptionPane.showMessageDialog(null, "이미 가입되었습니다.");
+                token_input.setText(null);
             }
             conn.close();
         } catch (Exception ex) {
