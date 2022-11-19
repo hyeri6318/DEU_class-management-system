@@ -3,10 +3,10 @@ package cms.SchedulePackage;
 import cms.UserPackage.ChangeInformPage;
 import cms.UserPackage.DeleteInformPage;
 import cms.UserPackage.LoginPage;
+import cmsSuggestionPackage.PageSuggestion;
 
 /**
- 작성자: 정수연
- 기능: 교수 메인화면
+ * 작성자: 정수연 기능: 교수 메인화면
  */
 public class ProfessorMain extends javax.swing.JFrame {
 
@@ -24,6 +24,7 @@ public class ProfessorMain extends javax.swing.JFrame {
         delete_button1 = new javax.swing.JButton();
         inputSemina = new javax.swing.JButton();
         inputSchedule = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("교수 메인화면");
@@ -66,18 +67,31 @@ public class ProfessorMain extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("불편사항 제보");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(140, 140, 140)
-                .addComponent(jLabel1)
-                .addContainerGap(150, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(logoutBtn)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(logoutBtn))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(140, 140, 140)
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(132, 132, 132)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(132, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(134, 134, 134)
@@ -93,7 +107,9 @@ public class ProfessorMain extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 279, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 220, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(36, 36, 36)
                 .addComponent(logoutBtn)
                 .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -144,6 +160,12 @@ public class ProfessorMain extends javax.swing.JFrame {
         seat.setVisible(true);
     }//GEN-LAST:event_inputScheduleActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        PageSuggestion suggest = new PageSuggestion();
+        suggest.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -184,6 +206,7 @@ public class ProfessorMain extends javax.swing.JFrame {
     private javax.swing.JButton delete_button1;
     private javax.swing.JButton inputSchedule;
     private javax.swing.JButton inputSemina;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton logoutBtn;
     // End of variables declaration//GEN-END:variables

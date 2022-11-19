@@ -25,9 +25,6 @@ public class User {
     public void iqUnresUser(DefaultTableModel model){
         confirmUnres.inquiry(model);
     }
-    public void selectID(String id){
-        //id 선택
-    }
     
     public void rnResUser(String id){
         //예약 요청 승인 클래스 호출
