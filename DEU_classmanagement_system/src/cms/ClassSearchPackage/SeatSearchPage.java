@@ -193,11 +193,13 @@ public class SeatSearchPage extends javax.swing.JFrame {
                                 return false;
 
                             } else if (count == temp) {// 예약되어 있지 않은 시간 (예약 가능)
+                                seat_num = Integer.parseInt(seat);
                                 return true;
                             }
                             count++;
                         }
                     } else { // 예약되지 않은 좌석
+                        seat_num = Integer.parseInt(seat);
                         return true;
                     }
                 }
