@@ -126,6 +126,8 @@ public class SeatSearchPage extends javax.swing.JFrame {
         return true;
     }
 
+    String seat = null;
+
     public boolean r_seat() {   // 좌석 선택 여부 확인
         class_num = Integer.parseInt(class_combobox.getSelectedItem().toString());
         starttime = start_combobox.getSelectedItem().toString();
@@ -136,8 +138,6 @@ public class SeatSearchPage extends javax.swing.JFrame {
         Statement st = null;
         ResultSet rs = null;
         ResultSet rs1 = null;
-
-        String seat = null;
 
         try {
             conn = db.getConnection();

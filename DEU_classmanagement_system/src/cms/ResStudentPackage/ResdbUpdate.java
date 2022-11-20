@@ -67,7 +67,7 @@ public class ResdbUpdate implements ResObserver {
             conn = db.getConnection();
             ps = conn.prepareStatement("insert into Reservation values(?,?,?,?,?,?,?,?,?)");
 
-//            if (t_check) {
+            if (t_check) {
                 if (r_check) {
                     if (w_check) {
                         ps.setString(1, name);  // 이름 String
@@ -89,9 +89,9 @@ public class ResdbUpdate implements ResObserver {
                 } else {
                     JOptionPane.showMessageDialog(null, "이미 예약 되었습니다.");
                 }
-//            } else {
-//                JOptionPane.showMessageDialog(null, "예약 가능한 시간이 지났습니다.");
-//            }
+            } else {
+                JOptionPane.showMessageDialog(null, "예약 가능한 시간이 지났습니다.");
+            }
 
             conn.close();
 
