@@ -144,8 +144,8 @@ public class TimeTablePage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
    
-    int check911 = 0; // 시간표 조회 횟수를 1회로 제한
-    int check915=0;
+    int check911 = 0; //  911시간표 조회 횟수를 1회로 제한
+    int check915=0; // 915시간표 조회 횟수를 1회로 제한
     int check916=0;
     int check918=0;
     

@@ -1,6 +1,6 @@
 /*
 작성자 : 이혜리
-기능 : Command Pattern에서 Receiver의 역할로 요청자에게 결과를 제공하도록 구현함.
+기능 : Command Pattern에서 Receiver의 역할로 요청자에게 결과를 제공하도록 하는 클래스
  */
 package cms.ClassSearchPackage;
 
